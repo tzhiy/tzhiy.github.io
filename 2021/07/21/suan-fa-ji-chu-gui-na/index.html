@@ -476,14 +476,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    460
+                    5.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    23 分
                 </div>
                 
 
@@ -508,21 +508,28 @@
             <div id="articleContent">
                 <h1 id="算法设计与分析基础"><a href="#算法设计与分析基础" class="headerlink" title="算法设计与分析基础"></a>算法设计与分析基础</h1><h2 id="1-算法基础"><a href="#1-算法基础" class="headerlink" title="1. 算法基础"></a>1. 算法基础</h2><h3 id="1-1-渐进复杂度分析"><a href="#1-1-渐进复杂度分析" class="headerlink" title="1.1 渐进复杂度分析"></a>1.1 渐进复杂度分析</h3><h4 id="1-1-1-概述"><a href="#1-1-1-概述" class="headerlink" title="1.1.1 概述"></a>1.1.1 概述</h4><p>时间复杂度，空间复杂度  只考虑最高阶</p>
 <h4 id="1-1-2-渐进复杂度分析"><a href="#1-1-2-渐进复杂度分析" class="headerlink" title="1.1.2 渐进复杂度分析"></a>1.1.2 渐进复杂度分析</h4><ol>
-<li>大O，渐进上界记号，上界越低越准确，越有意义<br>如果存在两个正的常数c和n0，对于任意n≥n0，都有f(n)≤c×g(n)，则记为f(n)=O(g(n)),即g(n)为f(n)的上界。</li>
-<li>大Ω，渐进下界记号</li>
-<li>大Θ，渐进紧界记号</li>
+<li><p>大O，渐进上界记号，上界越低越准确，越有意义</p>
+<p>如果存在两个正的常数c和n0，对于任意n≥n0，都有f(n)≤c×g(n)，则记为f(n)=O(g(n)),即g(n)为f(n)的上界。</p>
+</li>
+<li><p>大Ω，渐进下界记号</p>
+</li>
+<li><p>大Θ，渐进紧界记号</p>
+</li>
 </ol>
 <p>重要结论：</p>
 <ol>
 <li><p>如果T1(n)=O(f(n))，T2(n)=O(g(n)),那么</p>
 <ol>
-<li>T1(n)+T2(n)= O(f(n)+g(n)) </li>
-<li>T1(n)*T2(n)= O(f(n)*g(n)) </li>
-</ol>
+<li><p>T1(n)+T2(n)= O(f(n)+g(n)) </p>
 </li>
-<li><p>对任意常数k，(logn)^k ≤ O(n)。<br>(说明n的增长要快于log2n的任意次幂)</p>
+<li><p>T1(n)*T2(n)= O(f(n)*g(n)) </p>
 </li>
 </ol>
+</li>
+<li><p>对任意常数k，(logn)^k ≤ O(n)。</p>
+</li>
+</ol>
+<p>(说明n的增长要快于log2n的任意次幂)</p>
 <p>O(1)&lt;O(log2n)&lt;O(n)&lt;O(nlog2n)&lt;O(n2)&lt;O(n3)O(2^n)&lt;O(n!)&lt;O(n^n)</p>
 <h4 id="1-1-3-算法的最好、最坏和平均情况"><a href="#1-1-3-算法的最好、最坏和平均情况" class="headerlink" title="1.1.3 算法的最好、最坏和平均情况"></a>1.1.3 算法的最好、最坏和平均情况</h4><p>通常算最坏情况，因为一般平均情况就是最坏情况</p>
 <h4 id="1-1-4-时间复杂度分析的一般步骤"><a href="#1-1-4-时间复杂度分析的一般步骤" class="headerlink" title="1.1.4 时间复杂度分析的一般步骤"></a>1.1.4 时间复杂度分析的一般步骤</h4><h4 id="1-1-5-渐进空间复杂度分析"><a href="#1-1-5-渐进空间复杂度分析" class="headerlink" title="1.1.5 渐进空间复杂度分析"></a>1.1.5 渐进空间复杂度分析</h4><p>只考察临时变量所占空间，S(n)=O(g(n))、Ω(g(n))或Θ(g(n))</p>
@@ -534,33 +541,45 @@
 </li>
 <li><p>求解递归方程</p>
 <ol>
-<li>代入法</li>
-<li>递归树法</li>
-<li>迭代法<br>从初始递归方程开始，反复用递归方程右边的等式代入左边的函数，直到得到初值。</li>
-<li>主方法<br>T(n)=aT(n/b)+f(n)<img src="image-20210721063927567.png" alt="image-20210721063927567" style="zoom: 50%;">
-不相等时，f(n)比n^log(b⁡)a大或小n^ε倍，否则主方法不成立，例如：logn<n^ε< li="">
-</n^ε<></li></ol>
+<li><p>代入法</p>
+</li>
+<li><p>递归树法</p>
+</li>
+<li><p>迭代法</p>
+<p>从初始递归方程开始，反复用递归方程右边的等式代入左边的函数，直到得到初值。</p>
+</li>
+<li><p>主方法</p>
+<p>T(n)=aT(n/b)+f(n)</p>
+<img src="image-20210721063927567.png" alt="image-20210721063927567" style="zoom: 50%;">
+
+<p>不相等时，f(n)比n^log(b⁡)a大或小n^ε倍，否则主方法不成立，例如：logn&lt;n^ε</p>
+</li>
+</ol>
 </li>
 </ol>
 <h2 id="2-分治法"><a href="#2-分治法" class="headerlink" title="2 分治法"></a>2 分治法</h2><h3 id="2-1概述"><a href="#2-1概述" class="headerlink" title="2.1概述"></a>2.1概述</h3><h4 id="2-1-1条件"><a href="#2-1-1条件" class="headerlink" title="2.1.1条件"></a>2.1.1条件</h4><ol>
-<li>原问题与子问题形式相</li>
-<li>不含公共子问题</li>
-<li>子问题足够小的时候很容易求解</li>
+<li><p>原问题与子问题形式相</p>
+</li>
+<li><p>不含公共子问题</p>
+</li>
+<li><p>子问题足够小的时候很容易求解</p>
+</li>
 </ol>
 <h4 id="2-1-2步骤"><a href="#2-1-2步骤" class="headerlink" title="2.1.2步骤"></a>2.1.2步骤</h4><ol>
-<li>划分：较小，相互独立的子问题</li>
-<li>求解：容易求解则求解，不容易则递归</li>
-<li>合并：子问题的解合并为原问题的解<br>k个子问题   k=1,减治法    k=2,二分法</li>
+<li><p>划分：较小，相互独立的子问题</p>
+</li>
+<li><p>求解：容易求解则求解，不容易则递归</p>
+</li>
+<li><p>合并：子问题的解合并为原问题的解<br>k个子问题   k=1,减治法    k=2,二分法</p>
+</li>
 </ol>
 <h4 id="2-1-3-求O-n"><a href="#2-1-3-求O-n" class="headerlink" title="2.1.3 求O(n)"></a>2.1.3 求O(n)</h4><p>主方法</p>
-<h3 id="2-2-排序问题"><a href="#2-2-排序问题" class="headerlink" title="2.2 排序问题"></a>2.2 排序问题</h3><h4 id="2-2-1-快速排序-二分法"><a href="#2-2-1-快速排序-二分法" class="headerlink" title="2.2.1 快速排序  二分法"></a>2.2.1 快速排序  二分法</h4><pre><code>平均(最好)时间复杂度: T(n) = O(nlogn)
-最坏时间复杂度: T(n) = O(n2)
-平均(最好)空间复杂度：O(logn)
-最坏情况下空间复杂度：O(n)
-</code></pre>
-<h4 id="2-2-2-归并排序-二分法"><a href="#2-2-2-归并排序-二分法" class="headerlink" title="2.2.2 归并排序  二分法"></a>2.2.2 归并排序  二分法</h4><pre><code>自底向上    T(n)=O(nlogn)
-自顶向下    T(n)=O(nlogn)   S(n)=O(n)
-</code></pre>
+<h3 id="2-2-排序问题"><a href="#2-2-排序问题" class="headerlink" title="2.2 排序问题"></a>2.2 排序问题</h3><h4 id="2-2-1-快速排序-二分法"><a href="#2-2-1-快速排序-二分法" class="headerlink" title="2.2.1 快速排序  二分法"></a>2.2.1 快速排序  二分法</h4><p>平均(最好)时间复杂度: T(n) = O(nlogn)</p>
+<p>最坏时间复杂度: T(n) = O(n2)</p>
+<p>平均(最好)空间复杂度：O(logn)</p>
+<p>最坏情况下空间复杂度：O(n)</p>
+<h4 id="2-2-2-归并排序-二分法"><a href="#2-2-2-归并排序-二分法" class="headerlink" title="2.2.2 归并排序  二分法"></a>2.2.2 归并排序  二分法</h4><p>自底向上    T(n)=O(nlogn)</p>
+<p>自顶向下    T(n)=O(nlogn)   S(n)=O(n)</p>
 <h3 id="2-3-查找问题"><a href="#2-3-查找问题" class="headerlink" title="2.3 查找问题"></a>2.3 查找问题</h3><h4 id="2-3-1-折半查找-减治法"><a href="#2-3-1-折半查找-减治法" class="headerlink" title="2.3.1 折半查找   减治法"></a>2.3.1 折半查找   减治法</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">/*
 给定有序数组R[low,high],输出值为k的元素的下表
 */
@@ -580,8 +599,6 @@ int main(){
     cout&lt;&lt;result;
     return 0;
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
 
 <h4 id="2-3-2-查找第k小元素-减治法"><a href="#2-3-2-查找第k小元素-减治法" class="headerlink" title="2.3.2 查找第k小元素     减治法"></a>2.3.2 查找第k小元素     减治法</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">/*
 设无序序列 T =(r1, r2, …, rn)，
@@ -632,26 +649,42 @@ int main(){
 
 <p>这两个问题虽然说是将原问题分解成了两个子问题，但是每次递归只选择了其中的一个子问题求解，不涉及问题的合并，所以是减治法。</p>
 <h3 id="2-4-组合问题"><a href="#2-4-组合问题" class="headerlink" title="2.4 组合问题"></a>2.4 组合问题</h3><h4 id="2-4-1-最大子段问题"><a href="#2-4-1-最大子段问题" class="headerlink" title="2.4.1 最大子段问题"></a>2.4.1 最大子段问题</h4><ol>
-<li>二分法<br>分为左边、右边、中间一共三段，左右两边分别递归，中间部分求mid左边的最大和s1以及右边的最大和s2,再相加得s1+s2<br>T(n)=O(nlogn)</li>
-<li>在线处理法  有代码<br>仅扫描一次，T(n)=O(n)</li>
+<li><p>二分法</p>
+<p>分为左边、右边、中间一共三段，左右两边分别递归，中间部分求mid左边的最大和s1以及右边的最大和s2,再相加得s1+s2</p>
+<p>T(n)=O(nlogn)</p>
+</li>
+<li><p>在线处理法  有代码</p>
+<p>仅扫描一次，T(n)=O(n)</p>
+</li>
 </ol>
 <h4 id="2-4-2-棋盘覆盖问题-几何问题-分治法-四分"><a href="#2-4-2-棋盘覆盖问题-几何问题-分治法-四分" class="headerlink" title="2.4.2 棋盘覆盖问题  几何问题 分治法(四分)"></a>2.4.2 棋盘覆盖问题  几何问题 分治法(四分)</h4><h2 id="3-动态规划"><a href="#3-动态规划" class="headerlink" title="3 动态规划"></a>3 动态规划</h2><h3 id="3-1-概述"><a href="#3-1-概述" class="headerlink" title="3.1 概述"></a>3.1 概述</h3><p>解决多阶段决策问题，用一个表来记录已解决的子问题</p>
 <h4 id="3-1-1-条件"><a href="#3-1-1-条件" class="headerlink" title="3.1.1 条件"></a>3.1.1 条件</h4><ol>
-<li>最优子结构，最优解包含的子问题的解也是最优的(反证法证明)</li>
-<li>有重叠子问题</li>
-<li>无后效性，某一状态一旦确定，不受以后决策的影响</li>
+<li><p>最优子结构，最优解包含的子问题的解也是最优的(反证法证明)</p>
+</li>
+<li><p>有重叠子问题</p>
+</li>
+<li><p>无后效性，某一状态一旦确定，不受以后决策的影响</p>
+</li>
 </ol>
 <h4 id="3-1-2-步骤"><a href="#3-1-2-步骤" class="headerlink" title="3.1.2 步骤"></a>3.1.2 步骤</h4><ol>
-<li>划分子问题</li>
-<li>确定动态规划函数</li>
-<li>填表，自底向上的计算最优解dp并保存，同时记录path信息</li>
-<li>构造最优解，通过path信息回溯到得到最优解的过程</li>
+<li><p>划分子问题</p>
+</li>
+<li><p>确定动态规划函数</p>
+</li>
+<li><p>填表，自底向上的计算最优解dp并保存，同时记录path信息</p>
+</li>
+<li><p>构造最优解，通过path信息回溯到得到最优解的过程</p>
+</li>
 </ol>
 <h4 id="3-1-3-求O-n"><a href="#3-1-3-求O-n" class="headerlink" title="3.1.3 求O(n)"></a>3.1.3 求O(n)</h4><p>一般是看算法程序里有几层循环，有t层的话T(n)=O(n^t)</p>
 <p>备忘录法的时间复杂度与一般动态规划相等，因为备忘录的最坏情况相当于一般动态规划</p>
 <h3 id="3-2-求解树塔问题（三角形最长路径）"><a href="#3-2-求解树塔问题（三角形最长路径）" class="headerlink" title="3.2 求解树塔问题（三角形最长路径）"></a>3.2 求解树塔问题（三角形最长路径）</h3><ol>
-<li>递归法 重复计算效率低</li>
-<li>备忘录方法（自顶向下）<br>求解出的结果放在 dp 中，相同问题只计算一次，是一般动态规划方法的变形<br>代码就是在一般的递归法中加入一个查表的动作，查到以后直接输出结果，不需要重复计算；当需要计算的时候，要将结果返回之前保存到dp数组中</li>
+<li><p>递归法 重复计算效率低</p>
+</li>
+<li><p>备忘录方法（自顶向下）</p>
+<p>求解出的结果放在 dp 中，相同问题只计算一次，是一般动态规划方法的变形</p>
+<p>代码就是在一般的递归法中加入一个查表的动作，查到以后直接输出结果，不需要重复计算；当需要计算的时候，要将结果返回之前保存到dp数组中</p>
+</li>
 </ol>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
 #include &lt;cstring&gt;
@@ -685,8 +718,6 @@ int main()
     cout &lt;&lt; maxSum(1, 1) &lt;&lt; endl;
 } //answer=60<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-
 <ol start="3">
 <li>动态规划（自底向上）</li>
 </ol>
@@ -718,7 +749,7 @@ int main()
     cout &lt;&lt; maxSum() &lt;&lt; endl;
 } //answer=60<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="3-3-最长递增子序列问题"><a href="#3-3-最长递增子序列问题" class="headerlink" title="3.3 最长递增子序列问题"></a>3.3 最长递增子序列问题</h3><p>​    动态规划</p>
+<h3 id="3-3-最长递增子序列问题"><a href="#3-3-最长递增子序列问题" class="headerlink" title="3.3 最长递增子序列问题"></a>3.3 最长递增子序列问题</h3><p>动态规划</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
 #include &lt;cstring&gt;
 using namespace std;
@@ -826,7 +857,7 @@ int main()
     
 } //answer=5,abbdb或acbdb<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="3-5-0-1背包问题"><a href="#3-5-0-1背包问题" class="headerlink" title="3.5 0/1背包问题"></a>3.5 0/1背包问题</h3><p>​    动态规划</p>
+<h3 id="3-5-0-1背包问题"><a href="#3-5-0-1背包问题" class="headerlink" title="3.5 0/1背包问题"></a>3.5 0/1背包问题</h3><p>动态规划</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
 #include &lt;cstring&gt;
 #include &lt;algorithm&gt;
@@ -896,17 +927,25 @@ int main()
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="3-6-最优连乘矩阵问题"><a href="#3-6-最优连乘矩阵问题" class="headerlink" title="3.6 最优连乘矩阵问题"></a>3.6 最优连乘矩阵问题</h3><ol>
-<li>动态规划</li>
-<li>备忘录</li>
+<li><p>动态规划</p>
+</li>
+<li><p>备忘录</p>
+</li>
 </ol>
 <h3 id="3-7-TSP问题（旅行商问题）"><a href="#3-7-TSP问题（旅行商问题）" class="headerlink" title="3.7 TSP问题（旅行商问题）"></a>3.7 TSP问题（旅行商问题）</h3><p>动态规划</p>
 <h2 id="4-贪心算法"><a href="#4-贪心算法" class="headerlink" title="4 贪心算法"></a>4 贪心算法</h2><h3 id="4-1-概述"><a href="#4-1-概述" class="headerlink" title="4.1 概述"></a>4.1 概述</h3><p>通常获得近似最优解</p>
 <h4 id="4-1-1-条件"><a href="#4-1-1-条件" class="headerlink" title="4.1.1 条件"></a>4.1.1 条件</h4><ol>
-<li>最优子结构</li>
-<li>贪心选择性质：全局最优解可以通过一系列局部最优解得到<br>证明：数学归纳法<ol>
-<li>问题的最优解可以修改为以贪心选择开始</li>
-<li>贪心选择之后，原问题简化为一个更小的类似子问题</li>
-<li>数学归纳法证明：通过每一步贪心选择，最终可获得以一个整体最优解</li>
+<li><p>最优子结构</p>
+</li>
+<li><p>贪心选择性质：全局最优解可以通过一系列局部最优解得到</p>
+<p>证明：数学归纳法</p>
+<ol>
+<li><p>问题的最优解可以修改为以贪心选择开始</p>
+</li>
+<li><p>贪心选择之后，原问题简化为一个更小的类似子问题</p>
+</li>
+<li><p>数学归纳法证明：通过每一步贪心选择，最终可获得以一个整体最优解</p>
+</li>
 </ol>
 </li>
 </ol>
@@ -923,10 +962,18 @@ int main()
 <p>可行函数：判断加入新对象时是否可行</p>
 <p>解决函数：判断是否构成完整解</p>
 <h4 id="4-1-3（重点）与动态规划法比较"><a href="#4-1-3（重点）与动态规划法比较" class="headerlink" title="4.1.3（重点）与动态规划法比较"></a>4.1.3（重点）与动态规划法比较</h4><ol>
-<li>相同点：都具有最优子结构性质</li>
-<li>不同点：<ol>
-<li>求解思路<br>动态规划：自底向上求解，求解过程依赖于子问题的解，在求出子问题之后再做出选择<br>贪心算法：自顶向下求解，求解过程不依赖于子问题的解，仅在当前状态下做出最好的选择，即局部最优选择</li>
-<li>适用问题<br>动态规划：重叠子问题<br>贪心算法：贪心选择性质</li>
+<li><p>相同点：都具有最优子结构性质</p>
+</li>
+<li><p>不同点：</p>
+<ol>
+<li><p>求解思路</p>
+<p>动态规划：自底向上求解，求解过程依赖于子问题的解，在求出子问题之后再做出选择</p>
+<p>贪心算法：自顶向下求解，求解过程不依赖于子问题的解，仅在当前状态下做出最好的选择，即局部最优选择</p>
+</li>
+<li><p>适用问题</p>
+<p>动态规划：重叠子问题</p>
+<p>贪心算法：贪心选择性质</p>
+</li>
 </ol>
 </li>
 </ol>
@@ -990,8 +1037,10 @@ int main()
 <p>贪心策略：剩余时间最大化，即按最早结束时间选择</p>
 <p>证明：</p>
 <ol>
-<li>贪心选择性质：若1不是第一个选中的活动，而k是，可以证明e1≤ek的，所以一定存在一个以1开始的最优解</li>
-<li>最优子结构：反证法，当一个问题的子解X-{1}=X’不是子问题的最优解，而Y’是最优解，则可以证明{1}+Y’是问题的最优解，这与前提相矛盾</li>
+<li><p>贪心选择性质：若1不是第一个选中的活动，而k是，可以证明e1≤ek的，所以一定存在一个以1开始的最优解</p>
+</li>
+<li><p>最优子结构：反证法，当一个问题的子解X-{1}=X’不是子问题的最优解，而Y’是最优解，则可以证明{1}+Y’是问题的最优解，这与前提相矛盾</p>
+</li>
 </ol>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
 #include &lt;cstring&gt;
@@ -1044,21 +1093,28 @@ int main()
 
 <p>4 / 5 问题的解法都按照以下步骤：</p>
 <ol>
-<li>预处理：按照单位价值递减/最早结束时间递增排序</li>
-<li>选择第一个活动</li>
-<li>贪心选择后续活动，若不可行则结束选择</li>
+<li><p>预处理：按照单位价值递减/最早结束时间递增排序</p>
+</li>
+<li><p>选择第一个活动</p>
+</li>
+<li><p>贪心选择后续活动，若不可行则结束选择</p>
+</li>
 </ol>
-<h3 id="4-6-huffman编码问题"><a href="#4-6-huffman编码问题" class="headerlink" title="4.6 huffman编码问题"></a>4.6 huffman编码问题</h3><h3 id="4-7-dijkstra算法"><a href="#4-7-dijkstra算法" class="headerlink" title="4.7 dijkstra算法"></a>4.7 dijkstra算法</h3><h3 id="4-8-最小生成树问题"><a href="#4-8-最小生成树问题" class="headerlink" title="4.8 最小生成树问题"></a>4.8 最小生成树问题</h3><h2 id="5-回溯法"><a href="#5-回溯法" class="headerlink" title="5 回溯法"></a>5 回溯法</h2><h3 id="5-0-搜索算法的概述"><a href="#5-0-搜索算法的概述" class="headerlink" title="5.0 搜索算法的概述"></a>5.0 搜索算法的概述</h3><h3 id="5-0-1-问题的解"><a href="#5-0-1-问题的解" class="headerlink" title="5.0.1 问题的解"></a>5.0.1 问题的解</h3><p>可能解、可行解、最优解</p>
-<h3 id="5-0-2-问题求解与搜索算法"><a href="#5-0-2-问题求解与搜索算法" class="headerlink" title="5.0.2 问题求解与搜索算法"></a>5.0.2 问题求解与搜索算法</h3><p>问题的表示：枚举对象、解的表示</p>
+<h3 id="4-6-huffman编码问题"><a href="#4-6-huffman编码问题" class="headerlink" title="4.6 huffman编码问题"></a>4.6 huffman编码问题</h3><h3 id="4-7-dijkstra算法"><a href="#4-7-dijkstra算法" class="headerlink" title="4.7 dijkstra算法"></a>4.7 dijkstra算法</h3><h3 id="4-8-最小生成树问题"><a href="#4-8-最小生成树问题" class="headerlink" title="4.8 最小生成树问题"></a>4.8 最小生成树问题</h3><h2 id="5-回溯法"><a href="#5-回溯法" class="headerlink" title="5 回溯法"></a>5 回溯法</h2><h3 id="5-0-搜索算法的概述"><a href="#5-0-搜索算法的概述" class="headerlink" title="5.0 搜索算法的概述"></a>5.0 搜索算法的概述</h3><h4 id="5-0-1-问题的解"><a href="#5-0-1-问题的解" class="headerlink" title="5.0.1 问题的解"></a>5.0.1 问题的解</h4><p>可能解、可行解、最优解</p>
+<h4 id="5-0-2-问题求解与搜索算法"><a href="#5-0-2-问题求解与搜索算法" class="headerlink" title="5.0.2 问题求解与搜索算法"></a>5.0.2 问题求解与搜索算法</h4><p>问题的表示：枚举对象、解的表示</p>
 <p>求解的方法：递归、动态规划</p>
 <p>搜索算法是一个通用的解法，设计树再遍历</p>
 <p>还要进行优化，如剪枝用来避免无效搜索、启发式信息用来加速</p>
-<h3 id="5-0-3-问题的解空间树"><a href="#5-0-3-问题的解空间树" class="headerlink" title="5.0.3 问题的解空间树"></a>5.0.3 问题的解空间树</h3><ol>
+<h4 id="5-0-3-问题的解空间树"><a href="#5-0-3-问题的解空间树" class="headerlink" title="5.0.3 问题的解空间树"></a>5.0.3 问题的解空间树</h4><ol>
 <li><p>概念</p>
 </li>
 <li><p>解空间树</p>
 </li>
-<li><p>解空间树可以形式化地定义为一个四元组（S，A，G，F）<br>S表示问题的初始状态，它是搜索的起点。<br>A是采取的操作符集合，初始状态和操作符隐含地定义了问题的解空间。<br>G表示目标测试，它判断给定的状态是否为目标状态。它可以是表示目标状态的一个状态集合，也可以是一个判定函数。<br>F代表路径耗散函数，它的定义需要具体问题具体分析。</p>
+<li><p>解空间树可以形式化地定义为一个四元组（S，A，G，F）</p>
+<p>S表示问题的初始状态，它是搜索的起点。</p>
+<p>A是采取的操作符集合，初始状态和操作符隐含地定义了问题的解空间。</p>
+<p>G表示目标测试，它判断给定的状态是否为目标状态。它可以是表示目标状态的一个状态集合，也可以是一个判定函数。</p>
+<p>F代表路径耗散函数，它的定义需要具体问题具体分析。</p>
 </li>
 <li><p>搜索</p>
 <p>就是在解空间树中从初始状态出发，执行特定的操作，试探地寻找目标状态的过程。</p>
@@ -1074,86 +1130,126 @@ int main()
 </ol>
 <p>启发式搜索：基于规则的优化搜索算法</p>
 <ol>
-<li>DFS   stack</li>
-<li>BFS   queue</li>
-</ol>
+<li><p>DFS   stack</p>
 </li>
-</ol>
-<h2 id="5-1-回溯法的概述"><a href="#5-1-回溯法的概述" class="headerlink" title="5.1 回溯法的概述"></a>5.1 回溯法的概述</h2><h3 id="5-1-1-设计思想"><a href="#5-1-1-设计思想" class="headerlink" title="5.1.1 设计思想"></a>5.1.1 设计思想</h3><ol>
-<li>回溯=DFS+剪枝</li>
-<li>剪枝策略<ol>
-<li>约束函数剪枝(不可行解)<pre><code>        找到不合法的状态结点S，S的子树一定没有可行解
-</code></pre>
-</li>
-<li>限界函数剪枝(非最优解)<pre><code>        最优化问题，访问的状态为S，存在一个判定函数，以S为根的子树不可能包含最优解
-</code></pre>
-</li>
-<li>步骤<ol>
-<li>针对所给问题，定义问题的状态表示，确定结点的扩展搜索规则，确定问题的解空间树；</li>
-<li>以深度优先方式搜索解空间树，并在搜索过程中采用剪枝函数来避免无效搜索。</li>
-</ol>
+<li><p>BFS   queue</p>
 </li>
 </ol>
 </li>
 </ol>
-<h3 id="5-1-2-算法框架"><a href="#5-1-2-算法框架" class="headerlink" title="5.1.2 算法框架"></a>5.1.2 算法框架</h3><ol>
+<h3 id="5-1-回溯法的概述"><a href="#5-1-回溯法的概述" class="headerlink" title="5.1 回溯法的概述"></a>5.1 回溯法的概述</h3><h4 id="5-1-1-设计思想"><a href="#5-1-1-设计思想" class="headerlink" title="5.1.1 设计思想"></a>5.1.1 设计思想</h4><ol>
+<li><p>回溯=DFS+剪枝</p>
+</li>
+<li><p>剪枝策略</p>
+<ol>
+<li><p>约束函数剪枝(不可行解)</p>
+<p>找到不合法的状态结点S，S的子树一定没有可行解</p>
+</li>
+<li><p>限界函数剪枝(非最优解)</p>
+<p>最优化问题，访问的状态为S，存在一个判定函数，以S为根的子树不可能包含最优解</p>
+</li>
+<li><p>步骤</p>
+<ol>
+<li><p>针对所给问题，定义问题的状态表示，确定结点的扩展搜索规则，确定问题的解空间树；</p>
+</li>
+<li><p>以深度优先方式搜索解空间树，并在搜索过程中采用剪枝函数来避免无效搜索。</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="5-1-2-算法框架"><a href="#5-1-2-算法框架" class="headerlink" title="5.1.2 算法框架"></a>5.1.2 算法框架</h4><ol>
 <li><p>递归回溯</p>
 <ol>
-<li>子集树</li>
-<li>排列树</li>
+<li><p>子集树</p>
+</li>
+<li><p>排列树</p>
+</li>
 </ol>
 </li>
 <li><p>迭代回溯</p>
 </li>
 <li><p>时空性能</p>
 <ol>
-<li><p>时间性能分析<br>最坏为指数阶：解空间树是子集树时对应算法的时间复杂度为O(2^n)(有或者没有)，排列树为O(n!)(全排列)。<br>一般情况下：加上剪枝策略后，回溯法的效率一般高于蛮力法。</p>
+<li><p>时间性能分析</p>
+<p>最坏为指数阶：解空间树是子集树时对应算法的时间复杂度为O(2^n)(有或者没有)，排列树为O(n!)(全排列)。</p>
+<p>一般情况下：加上剪枝策略后，回溯法的效率一般高于蛮力法。</p>
 </li>
-<li><p>空间性能分析<br>假设解空间树中从根结点到叶结点的最长路径的长度为h(n)，则回溯法所需的计算空间通常为O(h(n))。<br>显式地存储整个解空间则需要O(2^h(n))或O(h(n)!)内存空间。</p>
+<li><p>空间性能分析</p>
+<p>假设解空间树中从根结点到叶结点的最长路径的长度为h(n)，则回溯法所需的计算空间通常为O(h(n))。</p>
+<p>显式地存储整个解空间则需要O(2^h(n))或O(h(n)!)内存空间。</p>
 </li>
 </ol>
 </li>
 </ol>
-<h2 id="5-2-m着色问题"><a href="#5-2-m着色问题" class="headerlink" title="5.2 m着色问题"></a>5.2 m着色问题</h2><p>约束条件：相邻两点是否着色相同<br>T(n)=O(m^n)</p>
-<h2 id="5-3-n皇后问题"><a href="#5-3-n皇后问题" class="headerlink" title="5.3 n皇后问题"></a>5.3 n皇后问题</h2><p>约束条件：每行或每列不存在两个元素，对角线上不存在两个元素<br>T(n)=O(n^n)<br>利用显式约束排除两个皇后在同一行或同一列的方法，可能解是（1,2，……,n）的一个排列，因此对应的解空间树中有n!个叶子节点，所以算法的时间复杂度可以降为O(n!) </p>
-<h2 id="5-4-0-1背包问题"><a href="#5-4-0-1背包问题" class="headerlink" title="5.4 0-1背包问题"></a>5.4 0-1背包问题</h2><p>约束条件：剪除不可能获得可行解的子树<br>限界条件：剪除不可能获得最优解的子树<br>最坏复杂度即不考虑剪枝时的复杂度，T(n)=O(2^n)</p>
+<h3 id="5-2-m着色问题"><a href="#5-2-m着色问题" class="headerlink" title="5.2 m着色问题"></a>5.2 m着色问题</h3><p>约束条件：相邻两点是否着色相同</p>
+<p>T(n)=O(m^n)</p>
+<h3 id="5-3-n皇后问题"><a href="#5-3-n皇后问题" class="headerlink" title="5.3 n皇后问题"></a>5.3 n皇后问题</h3><p>约束条件：每行或每列不存在两个元素，对角线上不存在两个元素</p>
+<p>T(n)=O(n^n)</p>
+<p>利用显式约束排除两个皇后在同一行或同一列的方法，可能解是（1,2，……,n）的一个排列，因此对应的解空间树中有n!个叶子节点，所以算法的时间复杂度可以降为O(n!) </p>
+<h3 id="5-4-0-1背包问题"><a href="#5-4-0-1背包问题" class="headerlink" title="5.4 0-1背包问题"></a>5.4 0-1背包问题</h3><p>约束条件：剪除不可能获得可行解的子树</p>
+<p>限界条件：剪除不可能获得最优解的子树</p>
+<p>最坏复杂度即不考虑剪枝时的复杂度，T(n)=O(2^n)</p>
 <h2 id="6-分支限界法"><a href="#6-分支限界法" class="headerlink" title="6 分支限界法"></a>6 分支限界法</h2><h3 id="6-1-概述"><a href="#6-1-概述" class="headerlink" title="6.1 概述"></a>6.1 概述</h3><h4 id="6-1-1-分支限界法"><a href="#6-1-1-分支限界法" class="headerlink" title="6.1.1 分支限界法"></a>6.1.1 分支限界法</h4><p>BFS+剪枝(限界)，找最优解</p>
 <h4 id="6-1-2-设计思想"><a href="#6-1-2-设计思想" class="headerlink" title="6.1.2 设计思想"></a>6.1.2 设计思想</h4><ol>
-<li>确定限界函数<ol>
+<li><p>确定限界函数</p>
+<ol>
 <li>目标函数是求最大值：则设计上界限界函数ub，若si是sj的双亲结点，则满足ub(si)≥ub(sj)。当找到一个可行解ub(sk)后，将所有小于ub(sk)的结点剪枝。</li>
-<li>目标函数是求最小值：则设计下界限界函数lb，若si是sj的双亲结点，则满足lb(si)≤lb(sj)。当找到一个可行解lb(sk)后，将所有大于lb(sk)的结点剪枝。</li>
-</ol>
-</li>
-<li>组织待处理的活结点表<ol>
-<li>队列式 queue</li>
-<li>优先队列式 priority_queue<ol>
-<li>计算起始结点（根结点）的优先级并加入优先队列（与特定问题相关的信息的函数值决定优先级）。</li>
-<li>从优先队列中取出优先级最高的结点作为当前扩展结点，使搜索朝着解空间树上可能有最优解的分支推进，以便尽快地找出一个最优解。</li>
-<li>对当前扩展结点，先从左到右地产生它的所有孩子结点，然后用约束条件检查，对所有满足约束条件的孩子结点计算优先级并加入优先队列。</li>
-<li>重复步骤2和3，直到找到一个解或优先队列为空为止。</li>
-</ol>
-</li>
-<li>确定向量的各个分量<ol>
-<li>对每个扩展结点保存从根结点到该结点的路径。<br>每个结点带有一个可能的解向量。这种做法比较浪费空间，但实现起来简单，后面的示例均采用这种方式。</li>
-<li>在搜索过程中构建搜索经过的树结构。<br>每个结点带有一个双亲结点指针，当找到最优解时，通过双亲指针找到对应的最优解向量。这种做法需保存搜索经过的树结构，每个结点增加一个指向双亲结点的指针。</li>
-</ol>
-</li>
-<li>时间性能分析</li>
 </ol>
 </li>
 </ol>
-<p>在最坏情况下，时间复杂性是指数阶。</p>
+<ol start="2">
+<li><p>目标函数是求最小值：则设计下界限界函数lb，若si是sj的双亲结点，则满足lb(si)≤lb(sj)。当找到一个可行解lb(sk)后，将所有大于lb(sk)的结点剪枝。</p>
+</li>
+<li><p>组织待处理的活结点表</p>
+<ol>
+<li><p>队列式 queue</p>
+</li>
+<li><p>优先队列式 priority_queue</p>
+<ol>
+<li><p>计算起始结点（根结点）的优先级并加入优先队列（与特定问题相关的信息的函数值决定优先级）。</p>
+</li>
+<li><p>从优先队列中取出优先级最高的结点作为当前扩展结点，使搜索朝着解空间树上可能有最优解的分支推进，以便尽快地找出一个最优解。</p>
+</li>
+<li><p>对当前扩展结点，先从左到右地产生它的所有孩子结点，然后用约束条件检查，对所有满足约束条件的孩子结点计算优先级并加入优先队列。</p>
+</li>
+<li><p>重复步骤2和3，直到找到一个解或优先队列为空为止。</p>
+</li>
+</ol>
+</li>
+<li><p>确定向量的各个分量</p>
+<ol>
+<li><p>对每个扩展结点保存从根结点到该结点的路径。         </p>
+<p>每个结点带有一个可能的解向量。这种做法比较浪费空间，但实现起来简单，后面的示例均采用这种方式。</p>
+</li>
+<li><p>在搜索过程中构建搜索经过的树结构。</p>
+<p>每个结点带有一个双亲结点指针，当找到最优解时，通过双亲指针找到对应的最优解向量。这种做法需保存搜索经过的树结构，每个结点增加一个指向双亲结点的指针。</p>
+</li>
+</ol>
+</li>
+<li><p>时间性能分析</p>
+<p>   在最坏情况下，时间复杂性是指数阶。</p>
+</li>
+</ol>
+</li>
+</ol>
 <h3 id="6-2-0-1背包问题"><a href="#6-2-0-1背包问题" class="headerlink" title="6.2 0-1背包问题"></a>6.2 0-1背包问题</h3><ol>
-<li><p>队列式<br>上界界限函数(贪心算法)</p>
-</li>
-<li><p>优先队列式<br>必须设计限界函数，因为优先级是以限界函数值为基础的</p>
-</li>
+<li>队列式</li>
 </ol>
+<p>上界界限函数(贪心算法)</p>
+<ol start="2">
+<li>优先队列式</li>
+</ol>
+<p>必须设计限界函数，因为优先级是以限界函数值为基础的</p>
 <p>两种方法T(n)=O(2^n)</p>
 <h3 id="6-3-TSP问题"><a href="#6-3-TSP问题" class="headerlink" title="6.3 TSP问题"></a>6.3 TSP问题</h3><ol>
-<li>确定目标函数的下界lb。</li>
-<li>确定目标函数值的计算方法（限界函数）。</li>
-<li>基于下界，利用优先队列式分支限界法，搜索最优值和最优解。</li>
+<li><p>确定目标函数的下界lb。</p>
+</li>
+<li><p>确定目标函数值的计算方法（限界函数）。</p>
+</li>
+<li><p>基于下界，利用优先队列式分支限界法，搜索最优值和最优解。</p>
+</li>
 </ol>
 
                 
@@ -1730,7 +1826,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.4k</span>
+                        class="white-color">16.4k</span>
             
             
             
