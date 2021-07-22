@@ -469,7 +469,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-21
+                    2021-07-22
                 </div>
                 
 
@@ -1196,12 +1196,11 @@ int main()
 <li><p>确定限界函数</p>
 <ol>
 <li>目标函数是求最大值：则设计上界限界函数ub，若si是sj的双亲结点，则满足ub(si)≥ub(sj)。当找到一个可行解ub(sk)后，将所有小于ub(sk)的结点剪枝。</li>
+<li>目标函数是求最小值：则设计下界限界函数lb，若si是sj的双亲结点，则满足lb(si)≤lb(sj)。当找到一个可行解lb(sk)后，将所有大于lb(sk)的结点剪枝。</li>
 </ol>
 </li>
 </ol>
 <ol start="2">
-<li><p>目标函数是求最小值：则设计下界限界函数lb，若si是sj的双亲结点，则满足lb(si)≤lb(sj)。当找到一个可行解lb(sk)后，将所有大于lb(sk)的结点剪枝。</p>
-</li>
 <li><p>组织待处理的活结点表</p>
 <ol>
 <li><p>队列式 queue</p>
@@ -1218,6 +1217,8 @@ int main()
 </li>
 </ol>
 </li>
+</ol>
+</li>
 <li><p>确定向量的各个分量</p>
 <ol>
 <li><p>对每个扩展结点保存从根结点到该结点的路径。         </p>
@@ -1229,9 +1230,7 @@ int main()
 </ol>
 </li>
 <li><p>时间性能分析</p>
-<p>   在最坏情况下，时间复杂性是指数阶。</p>
-</li>
-</ol>
+<p>在最坏情况下，时间复杂性是指数阶。</p>
 </li>
 </ol>
 <h3 id="6-2-0-1背包问题"><a href="#6-2-0-1背包问题" class="headerlink" title="6.2 0-1背包问题"></a>6.2 0-1背包问题</h3><ol>
@@ -1519,18 +1518,17 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/07/21/suan-fa-ji-chu-gui-na/">
+                <a href="/2021/07/22/css-4-7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.png" class="responsive-img" alt="算法基础归纳">
+                        <img src="/medias/featureimages/12.png" class="responsive-img" alt="CSS 基础总结 4/7">
                         
-                        <span class="card-title">算法基础归纳</span>
+                        <span class="card-title">CSS 基础总结 4/7</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1540,22 +1538,21 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-21
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
-                                    数据结构与算法
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
+                                    前端开发
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1563,8 +1560,12 @@ gitment.render('gitment-content');
                         <span class="chip bg-color">基础</span>
                     </a>
                     
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
@@ -1826,7 +1827,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">16.4k</span>
+                        class="white-color">18k</span>
             
             
             
