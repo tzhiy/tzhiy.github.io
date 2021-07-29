@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>CSS 6/7</title>
+      <link href="/2021/07/29/css-6-7/"/>
+      <url>/2021/07/29/css-6-7/</url>
+      
+        <content type="html"><![CDATA[<h1 id="CSS-基础总结-6-7"><a href="#CSS-基础总结-6-7" class="headerlink" title="CSS 基础总结 6/7"></a>CSS 基础总结 6/7</h1><h2 id="1-定位"><a href="#1-定位" class="headerlink" title="1 定位"></a>1 定位</h2><h3 id="1-1-为什么需要定位"><a href="#1-1-为什么需要定位" class="headerlink" title="1.1 为什么需要定位"></a>1.1 为什么需要定位</h3><p>提问： 以下情况使用标准流或者浮动能实现吗？ </p><ol><li>某个元素可以自由的在一个盒子内移动位置，并且压住其他盒子。</li><li>当我们滚动窗口的时候，盒子是固定屏幕某个位置的。</li></ol><p>以上效果，标准流或浮动都无法快速实现，此时需要定位来实现。 </p><p>所以： </p><ol><li>浮动可以让多个块级盒子一行没有缝隙排列显示， 经常用于横向排列盒子。 </li><li>定位则是可以让盒子自由的在某个盒子内移动位置或者固定屏幕中某个位置，并且可以压住其他盒子。</li></ol><h3 id="1-2-定位组成"><a href="#1-2-定位组成" class="headerlink" title="1.2 定位组成"></a>1.2 定位组成</h3><img src="image-20210729233532811.png" alt="image-20210729233532811" style="zoom:67%;"><img src="image-20210729233601687.png" alt="image-20210729233601687" style="zoom: 67%;"><h3 id="1-3-静态定位-static（了解）"><a href="#1-3-静态定位-static（了解）" class="headerlink" title="1.3 静态定位 static（了解）"></a>1.3 静态定位 static（了解）</h3><img src="image-20210729233622998.png" alt="image-20210729233622998" style="zoom:67%;"><h3 id="1-4-相对定位-relative（重要）"><a href="#1-4-相对定位-relative（重要）" class="headerlink" title="1.4 相对定位 relative（重要）"></a>1.4 相对定位 relative（重要）</h3><img src="image-20210729233637499.png" alt="image-20210729233637499" style="zoom:67%;"><h3 id="1-5-绝对定位-absolute（重要）"><a href="#1-5-绝对定位-absolute（重要）" class="headerlink" title="1.5 绝对定位 absolute（重要）"></a>1.5 绝对定位 absolute（重要）</h3><img src="image-20210729233703677.png" alt="image-20210729233703677" style="zoom:67%;"><h3 id="1-6-子绝父相的由来"><a href="#1-6-子绝父相的由来" class="headerlink" title="1.6 子绝父相的由来"></a>1.6 子绝父相的由来</h3><img src="image-20210729233736427.png" alt="image-20210729233736427" style="zoom:67%;"><h3 id="1-7-固定定位-fixed-（重要）"><a href="#1-7-固定定位-fixed-（重要）" class="headerlink" title="1.7 固定定位 fixed （重要）"></a>1.7 固定定位 fixed （重要）</h3><img src="image-20210729233801202.png" alt="image-20210729233801202" style="zoom:67%;"><img src="image-20210729233811218.png" alt="image-20210729233811218" style="zoom:67%;"><h3 id="1-8-粘性定位-sticky（了解）"><a href="#1-8-粘性定位-sticky（了解）" class="headerlink" title="1.8 粘性定位 sticky（了解）"></a>1.8 粘性定位 sticky（了解）</h3><img src="image-20210729233822508.png" alt="image-20210729233822508" style="zoom:67%;"><h3 id="1-9-定位的总结"><a href="#1-9-定位的总结" class="headerlink" title="1.9 定位的总结"></a>1.9 定位的总结</h3><img src="image-20210729233846329.png" alt="image-20210729233846329" style="zoom:67%;"><h3 id="1-10-定位叠放次序-z-index"><a href="#1-10-定位叠放次序-z-index" class="headerlink" title="1.10 定位叠放次序 z-index"></a>1.10 定位叠放次序 z-index</h3><img src="image-20210729233924197.png" alt="image-20210729233924197" style="zoom: 67%;"><h3 id="1-11-定位的拓展"><a href="#1-11-定位的拓展" class="headerlink" title="1.11 定位的拓展"></a>1.11 定位的拓展</h3><img src="image-20210729233955233.png" alt="image-20210729233955233" style="zoom:67%;"><img src="image-20210729234007050.png" alt="image-20210729234007050" style="zoom:67%;"><img src="image-20210729234029204.png" alt="image-20210729234029204" style="zoom: 67%;"><img src="image-20210729234213271.png" alt="image-20210729234213271" style="zoom:67%;"><h2 id="2-网页布局总结"><a href="#2-网页布局总结" class="headerlink" title="2 网页布局总结"></a>2 网页布局总结</h2><img src="image-20210729234240106.png" alt="image-20210729234240106" style="zoom:67%;"><h2 id="3-元素的显示与隐藏"><a href="#3-元素的显示与隐藏" class="headerlink" title="3 元素的显示与隐藏"></a>3 元素的显示与隐藏</h2><img src="image-20210729234321556.png" alt="image-20210729234321556" style="zoom:67%;"><h3 id="3-1-display-属性"><a href="#3-1-display-属性" class="headerlink" title="3.1 display 属性"></a>3.1 display 属性</h3><img src="image-20210729234350926.png" alt="image-20210729234350926" style="zoom:67%;"><h3 id="3-2-visibility-可见性"><a href="#3-2-visibility-可见性" class="headerlink" title="3.2 visibility 可见性"></a>3.2 visibility 可见性</h3><img src="image-20210729234408680.png" alt="image-20210729234408680" style="zoom:67%;"><h3 id="3-3-overflow-溢出"><a href="#3-3-overflow-溢出" class="headerlink" title="3.3 overflow 溢出"></a>3.3 overflow 溢出</h3><img src="image-20210729234427342.png" alt="image-20210729234427342" style="zoom:67%;"><h3 id="3-4-总结"><a href="#3-4-总结" class="headerlink" title="3.4 总结"></a>3.4 总结</h3><img src="image-20210729234504721.png" alt="image-20210729234504721" style="zoom:67%;">]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础 </tag>
+            
+            <tag> CSS </tag>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>奥运奖牌榜微信小程序</title>
       <link href="/2021/07/28/ao-yun-jiang-pai-bang-wei-xin-xiao-cheng-xu/"/>
       <url>/2021/07/28/ao-yun-jiang-pai-bang-wei-xin-xiao-cheng-xu/</url>
