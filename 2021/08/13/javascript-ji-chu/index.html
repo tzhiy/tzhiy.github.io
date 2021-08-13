@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CSS 基础总结 7/7, tzhiy&#39;s Blog">
+    <meta name="keywords" content="JavaScript基础, tzhiy&#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CSS 基础总结 7/7 | tzhiy&#39;s Blog</title>
+    <title>JavaScript基础 | tzhiy&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CSS 基础总结 7/7</h1>
+                    <h1 class="description center-align post-title">JavaScript基础</h1>
                 </div>
             </div>
         </div>
@@ -437,12 +437,12 @@
                                 <span class="chip bg-color">基础</span>
                             </a>
                         
-                            <a href="/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
-                            </a>
-                        
                             <a href="/tags/%E5%89%8D%E7%AB%AF/">
                                 <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
                             </a>
                         
                     </div>
@@ -466,28 +466,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-31
+                    2021-08-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-01
+                    2021-08-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    754
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    6 分
                 </div>
                 
 
@@ -510,115 +510,262 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="CSS-基础总结-7-7"><a href="#CSS-基础总结-7-7" class="headerlink" title="CSS 基础总结 7/7"></a>CSS 基础总结 7/7</h1><h2 id="1-精灵图"><a href="#1-精灵图" class="headerlink" title="1 精灵图"></a>1 精灵图</h2><h3 id="1-1-为什么需要精灵图"><a href="#1-1-为什么需要精灵图" class="headerlink" title="1.1 为什么需要精灵图"></a>1.1 为什么需要精灵图</h3><img src="image-20210731033446339.png" alt="image-20210731033446339" style="zoom:67%;">
+                <h1 id="JavaScript-基础总结"><a href="#JavaScript-基础总结" class="headerlink" title="JavaScript 基础总结"></a>JavaScript 基础总结</h1><p>总结中删去了大量与 C 语言重复的内容。</p>
+<h2 id="0-初识-JavaScript"><a href="#0-初识-JavaScript" class="headerlink" title="0 初识 JavaScript"></a>0 初识 JavaScript</h2><h3 id="0-1-JavaScript"><a href="#0-1-JavaScript" class="headerlink" title="0.1 JavaScript"></a>0.1 JavaScript</h3><ul>
+<li>JavaScript 是世界上最流行的语言之一，是一种运行在客户端的脚本语言 （Script 即脚本）</li>
+<li>脚本语言：不需要编译，运行过程中由 JS 解释器( JS 引擎）逐行来进行解释并执行</li>
+<li>现在也可以基于 Node.js 技术进行服务器端编程</li>
+</ul>
+<img src="image-20210813224219238.png" alt="image-20210813224219238" style="zoom:50%;">
 
-<img src="image-20210731033508435.png" alt="image-20210731033508435" style="zoom:67%;">
+<h3 id="0-2-浏览器执行-JS"><a href="#0-2-浏览器执行-JS" class="headerlink" title="0.2 浏览器执行 JS"></a>0.2 浏览器执行 JS</h3><p>浏览器分成两部分：渲染引擎和 JS 引擎</p>
+<ul>
+<li>渲染引擎：用来解析HTML与CSS，俗称内核，比如 chrome 浏览器的 blink ，老版本的 webkit</li>
+<li>JS 引擎：也称为 JS 解释器。 用来读取网页中的 JavaScript 代码，对其处理后运行，比如 Chrome 浏览器的 V8</li>
+</ul>
+<p>浏览器本身并不会执行JS代码，而是通过内置 JavaScript 引擎（解释器）来执行 JS 代码。JS 引擎执行代码时逐行解释每一句源码（转换为机器语言），然后由计算机去执行，所以JavaScript 语言归为脚本语言，会逐行解释执行。</p>
+<img src="image-20210813224349565.png" alt="image-20210813224349565" style="zoom:50%;">
 
-<h3 id="1-2-精灵图（sprites）的使用"><a href="#1-2-精灵图（sprites）的使用" class="headerlink" title="1.2 精灵图（sprites）的使用"></a>1.2 精灵图（sprites）的使用</h3><img src="image-20210731033527478.png" alt="image-20210731033527478" style="zoom:67%;">
+<h3 id="0-3-JS的组成"><a href="#0-3-JS的组成" class="headerlink" title="0.3 JS的组成"></a>0.3 JS的组成</h3><p>JavaScript 包括 ECMAScript、DOM、BOM。</p>
+<img src="image-20210813224754444.png" alt="image-20210813224754444" style="zoom: 50%;">
 
-<h2 id="2-字体图标"><a href="#2-字体图标" class="headerlink" title="2 字体图标"></a>2 字体图标</h2><h3 id="2-1-字体图标的产生"><a href="#2-1-字体图标的产生" class="headerlink" title="2.1 字体图标的产生"></a>2.1 字体图标的产生</h3><img src="image-20210731033623041.png" alt="image-20210731033623041" style="zoom:67%;">
+<h4 id="1-ECMAScript"><a href="#1-ECMAScript" class="headerlink" title="1 ECMAScript"></a>1 ECMAScript</h4><p><strong>ECMAScript</strong> 是由ECMA 国际进行标准化的一门编程语言，这种语言在万维网上应用广泛，它往往被称为 JavaScript 或 JScript，但实际上后两者是 ECMAScript 语言的实现和扩展。</p>
+<img src="image-20210813225028937.png" alt="image-20210813225028937" style="zoom: 50%;">
 
-<h3 id="2-2-字体图标的优点"><a href="#2-2-字体图标的优点" class="headerlink" title="2.2 字体图标的优点"></a>2.2 字体图标的优点</h3><img src="image-20210731033641913.png" alt="image-20210731033641913" style="zoom:67%;">
+<p>ECMAScript：ECMAScript 规定了JS的编程语法和基础核心知识，是所有浏览器厂商共同遵守的一套JS语法工业标准。</p>
+<h4 id="2-DOM文档对象模型"><a href="#2-DOM文档对象模型" class="headerlink" title="2 DOM文档对象模型"></a>2 DOM文档对象模型</h4><p><strong>DOM</strong>是W3C组织推荐的处理可扩展标记语言的标准编程接口。通过 DOM 提供的接口可以对页面上的各种元素进行操作（大小、位置、颜色等）。</p>
+<h4 id="3-BOM浏览器对象模型"><a href="#3-BOM浏览器对象模型" class="headerlink" title="3 BOM浏览器对象模型"></a>3 BOM浏览器对象模型</h4><p><strong>BOM</strong>是指浏览器对象模型，它提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。通过BOM可以操作浏览器窗口，比如弹出框、控制浏览器跳转、获取分辨率等。</p>
+<h2 id="1-JS-书写格式"><a href="#1-JS-书写格式" class="headerlink" title="1 JS 书写格式"></a>1 JS 书写格式</h2><h3 id="1-1-行内式"><a href="#1-1-行内式" class="headerlink" title="1.1 行内式"></a>1.1 行内式</h3><pre class="line-numbers language-none"><code class="language-none">&lt;input type="button" value="点我试试" onclink="alert('Hello World')" /&gt; <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<img src="image-20210731033653183.png" alt="image-20210731033653183" style="zoom:67%;">
+<h3 id="1-2-内嵌式"><a href="#1-2-内嵌式" class="headerlink" title="1.2 内嵌式"></a>1.2 内嵌式</h3><pre class="line-numbers language-none"><code class="language-none">&lt;script&gt;
+     alert('Hello World!');
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2-3-字体图标的下载"><a href="#2-3-字体图标的下载" class="headerlink" title="2.3 字体图标的下载"></a>2.3 字体图标的下载</h3><img src="image-20210731033713669.png" alt="image-20210731033713669" style="zoom:67%;">
+<h3 id="1-3-外部JS"><a href="#1-3-外部JS" class="headerlink" title="1.3 外部JS"></a>1.3 外部JS</h3><pre class="line-numbers language-none"><code class="language-none">&lt;script src="my.js"&gt;&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="2-4-字体图标的引入"><a href="#2-4-字体图标的引入" class="headerlink" title="2.4 字体图标的引入"></a>2.4 字体图标的引入</h3><img src="image-20210731033735008.png" alt="image-20210731033735008" style="zoom:67%;">
+<h2 id="2-JS-基本语法"><a href="#2-JS-基本语法" class="headerlink" title="2 JS 基本语法"></a>2 JS 基本语法</h2><h3 id="2-1-输入输出"><a href="#2-1-输入输出" class="headerlink" title="2.1 输入输出"></a>2.1 输入输出</h3><table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">说明</th>
+<th align="center">归属</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">alert(msg);</td>
+<td align="center">浏览器弹出警示框</td>
+<td align="center">浏览器</td>
+</tr>
+<tr>
+<td align="center">console.log(msg);</td>
+<td align="center">浏览器控制台打印输出信息</td>
+<td align="center">浏览器</td>
+</tr>
+<tr>
+<td align="center">prompt(info);</td>
+<td align="center">浏览看弹出输入框，用户可以输入</td>
+<td align="center">浏览器</td>
+</tr>
+</tbody></table>
+<h3 id="2-2-变量"><a href="#2-2-变量" class="headerlink" title="2.2 变量"></a>2.2 变量</h3><h4 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1 初始化"></a>1 初始化</h4><p><code>var</code> 是一个 JS 关键字，用来声明变量(variable)。使用该关键字声明变量后，计算机会自动为变量分配内存空间。</p>
+<h4 id="2-声明变量的特殊情况"><a href="#2-声明变量的特殊情况" class="headerlink" title="2 声明变量的特殊情况"></a>2 声明变量的特殊情况</h4><table>
+<thead>
+<tr>
+<th align="center">说明</th>
+<th align="center">情况</th>
+<th align="center">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">只声明，不赋值</td>
+<td align="center">var age; console.log(age);</td>
+<td align="center">undefined</td>
+</tr>
+<tr>
+<td align="center">不声明，不赋值，直接使用</td>
+<td align="center">console.log(age)</td>
+<td align="center">报错</td>
+</tr>
+<tr>
+<td align="center">不声明，只赋值，会自动声明该变量</td>
+<td align="center">age = 10;console.log(age);</td>
+<td align="center">10</td>
+</tr>
+</tbody></table>
+<h3 id="2-3-数据类型"><a href="#2-3-数据类型" class="headerlink" title="2.3 数据类型"></a>2.3 数据类型</h3><p><strong>JavaScript是一种弱类型或动态语言。</strong>这意味着不用提前声明变量的类型，在程序运行过程中，类型会被自动确定。</p>
+<p>JS 把数据类型分为两类：</p>
+<ul>
+<li>基本数据类型(Number, String, Boolean, Undefined, Null)</li>
+<li>复杂数据类型(Object)</li>
+</ul>
+<p>基本数据类型</p>
+<table>
+<thead>
+<tr>
+<th>简单数据类型</th>
+<th>说明</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>number</td>
+<td>数字型，包含整型值和浮点型值，如21，0.21</td>
+<td>0</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>布尔值类型，如true，false ，等价于1和0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>undefined</td>
+<td>var a; 声明了变量a但是没有赋值，此时a=undefined</td>
+<td>undefined（未定义的）</td>
+</tr>
+<tr>
+<td>string</td>
+<td>字符串类型，如“张三”</td>
+<td>“”</td>
+</tr>
+<tr>
+<td>null</td>
+<td>var a = null;声明了变量a为空值</td>
+<td>null</td>
+</tr>
+</tbody></table>
+<p>详细信息参考：</p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AD%97%E9%9D%A2%E9%87%8F(string_literals)">语法和数据类型 - JavaScript | MDN (mozilla.org)</a></p>
+<h3 id="2-4-数据类型的转换"><a href="#2-4-数据类型的转换" class="headerlink" title="2.4 数据类型的转换"></a>2.4 数据类型的转换</h3><h4 id="1-转换为字符串型"><a href="#1-转换为字符串型" class="headerlink" title="1 转换为字符串型"></a>1 转换为字符串型</h4><table>
+<thead>
+<tr>
+<th align="center">方式</th>
+<th align="center">说明</th>
+<th align="center">案例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">toString()</td>
+<td align="center">转成字符串</td>
+<td align="center">var num = 1; alert(num.toString());</td>
+</tr>
+<tr>
+<td align="center">String()强制转换</td>
+<td align="center">转成字符串</td>
+<td align="center">var num = 1; alert(String(num));</td>
+</tr>
+<tr>
+<td align="center"><strong>加号拼接字符串</strong></td>
+<td align="center">和字符串拼接的结果都是字符串</td>
+<td align="center">var num =1; alert(num+“我是字符串”);</td>
+</tr>
+</tbody></table>
+<h4 id="2-转换为数字型"><a href="#2-转换为数字型" class="headerlink" title="2  转换为数字型"></a>2  转换为数字型</h4><table>
+<thead>
+<tr>
+<th>方式</th>
+<th>说明</th>
+<th>案例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>parselnt(string)函数</strong></td>
+<td>将string类型转成整数数值型</td>
+<td>parselnt(‘78’)</td>
+</tr>
+<tr>
+<td><strong>parseFloat(string)函数</strong></td>
+<td>将string类型转成浮点数数值型</td>
+<td>parseFloat(‘78.21’)</td>
+</tr>
+<tr>
+<td>Number()强制转换函数</td>
+<td>将string类型转换为数值型</td>
+<td>Number(‘12’)</td>
+</tr>
+<tr>
+<td>js 隐式转换(- * /)</td>
+<td>利用算术运算隐式转换为数值型</td>
+<td>‘12’-0</td>
+</tr>
+</tbody></table>
+<h4 id="3-转换为布尔型"><a href="#3-转换为布尔型" class="headerlink" title="3 转换为布尔型"></a>3 转换为布尔型</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+<th>案例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Boolean()函数</td>
+<td>其他类型转成布尔值</td>
+<td>Boolean(‘true’);</td>
+</tr>
+</tbody></table>
+<ul>
+<li>代表空、否定的值会被转换为false，如 ’ ’ , 0, NaN , null , undefined</li>
+<li>其余的值都会被被转换为true</li>
+</ul>
+<h3 id="2-5-运算符"><a href="#2-5-运算符" class="headerlink" title="2.5 运算符"></a>2.5 运算符</h3><p>运算符（operator）也被称为<strong>操作符</strong>，是用于实现赋值、比较和执行算数运算等功能的符号</p>
+<p>JavaScript 中常用的运算符有：</p>
+<ul>
+<li>算数运算符</li>
+<li>递增和递减运算符</li>
+<li>比较运算符</li>
+<li>逻辑运算符</li>
+<li>赋值运算符</li>
+</ul>
+<h3 id="2-6-流程控制"><a href="#2-6-流程控制" class="headerlink" title="2.6 流程控制"></a>2.6 流程控制</h3><ul>
+<li>if</li>
+<li>switch</li>
+<li>三元表达式</li>
+</ul>
+<h2 id="3-断点调试"><a href="#3-断点调试" class="headerlink" title="3 断点调试"></a>3 断点调试</h2><ol>
+<li>浏览器中按 F12 -&gt; sources -&gt;找到需要调试的文件 -&gt; 在程序的某一行设置断点</li>
+<li>刷新浏览器</li>
+<li>Watch: 监视，通过watch可以监视变量的值的变化</li>
+<li>F11: 程序单步执行，观察watch中变量的值的变化</li>
+</ol>
+<h2 id="4-循环"><a href="#4-循环" class="headerlink" title="4 循环"></a>4 循环</h2><ul>
+<li>for</li>
+<li>while</li>
+<li>do - while</li>
+<li>continue 关键字</li>
+<li>break 关键字</li>
+</ul>
+<h2 id="5-数组"><a href="#5-数组" class="headerlink" title="5 数组"></a>5 数组</h2><h3 id="5-1-创建数组"><a href="#5-1-创建数组" class="headerlink" title="5.1 创建数组"></a>5.1 创建数组</h3><p>JavaScript 中创建数组有两种方式：</p>
+<ul>
+<li>利用 new 创建数组</li>
+<li>利用数组字面量创建数组</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">// 1.利用数组字面量方式创建空的数组 
+var 数组名 =[];
+// 2.使用数组字面量方式创建带初始值的数组
+var 数组名 =['小白','小黑','小黄','瑞奇'];
+// 3.数组中可以存放任意类型的数据，例如字符串，数字，布尔值等
+var arrStus =['小白',12,true,28.9];<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="2-4-1-字体文件格式"><a href="#2-4-1-字体文件格式" class="headerlink" title="2.4.1 字体文件格式"></a>2.4.1 字体文件格式</h4><img src="image-20210731033755060.png" alt="image-20210731033755060" style="zoom:67%;">
+<h3 id="5-2-数组中新增元素"><a href="#5-2-数组中新增元素" class="headerlink" title="5.2 数组中新增元素"></a>5.2 数组中新增元素</h3><h4 id="1-通过修改-length-长度新增数组元素"><a href="#1-通过修改-length-长度新增数组元素" class="headerlink" title="1 通过修改 length 长度新增数组元素"></a>1 通过修改 length 长度新增数组元素</h4><ul>
+<li>可以通过修改 length 长度来实现数组扩容的目的</li>
+<li>length 属性是可读写的</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">var arr = ['red', 'green', 'blue', 'pink'];
+arr.length = 7;
+console.log(arr);
+console.log(arr[4]);
+console.log(arr[5]);
+console.log(arr[6]);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="2-4-2-字体的声明"><a href="#2-4-2-字体的声明" class="headerlink" title="2.4.2 字体的声明"></a>2.4.2 字体的声明</h4><p>.在 CSS 样式中全局声明字体： 简单理解把这些字体文件通过css引入到我们页面中。</p>
-<p>一定注意字体文件路径的问题。</p>
-<pre class="line-numbers language-none"><code class="language-none">@font-face {
- font-family: 'icomoon';
- src: url('fonts/icomoon.eot?7kkyc2');
- src: url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
- url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
- url('fonts/icomoon.woff?7kkyc2') format('woff'),
- url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
- font-weight: normal;
- font-style: normal;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>其中索引号是 4，5，6 的空间没有给值，就是声明变量未给值，默认值就是 <strong>undefined</strong></p>
+<h4 id="2-通过修改数组索引新增数组元素"><a href="#2-通过修改数组索引新增数组元素" class="headerlink" title="2 通过修改数组索引新增数组元素"></a>2 通过修改数组索引新增数组元素</h4><ul>
+<li>可以通过修改数组索引的方式追加数组元素</li>
+<li>不能直接给数组名赋值，否则会覆盖掉以前的数据</li>
+<li>这种方式也是我们最常用的一种方式</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">var arr = ['red', 'green', 'blue', 'pink'];
+arr[4] = 'hotpink';
+console.log(arr);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p>（在下载的 style.css 文件中复制）</p>
-<h4 id="2-4-3-HTML-标签内添加小图标"><a href="#2-4-3-HTML-标签内添加小图标" class="headerlink" title="2.4.3 HTML 标签内添加小图标"></a>2.4.3 HTML 标签内添加小图标</h4><img src="image-20210731034022920.png" alt="image-20210731034022920" style="zoom:67%;">
-
-<h4 id="2-4-4-给标签定义字体"><a href="#2-4-4-给标签定义字体" class="headerlink" title="2.4.4 给标签定义字体"></a>2.4.4 给标签定义字体</h4><img src="image-20210731034102244.png" alt="image-20210731034102244" style="zoom:67%;">
-
-<h3 id="2-5-字体图标的追加"><a href="#2-5-字体图标的追加" class="headerlink" title="2.5 字体图标的追加"></a>2.5 字体图标的追加</h3><img src="image-20210731034121415.png" alt="image-20210731034121415" style="zoom:67%;">
-
-<img src="image-20210731034127524.png" alt="image-20210731034127524" style="zoom:67%;">
-
-<h2 id="3-CSS-三角"><a href="#3-CSS-三角" class="headerlink" title="3 CSS 三角"></a>3 CSS 三角</h2><img src="image-20210731034152733.png" alt="image-20210731034152733" style="zoom:67%;">
-
-<pre class="line-numbers language-none"><code class="language-none">div {
- width: 0;
- height: 0;
- line-height: 0;
- font-size: 0;
- border: 50px solid transparent;
- border-left-color: pink;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="4-CSS-用户界面样式"><a href="#4-CSS-用户界面样式" class="headerlink" title="4 CSS 用户界面样式"></a>4 CSS 用户界面样式</h2><h3 id="4-0-什么是界面样式"><a href="#4-0-什么是界面样式" class="headerlink" title="4.0 什么是界面样式"></a>4.0 什么是界面样式</h3><img src="image-20210731034228067.png" alt="image-20210731034228067" style="zoom:67%;">
-
-<h3 id="4-1-鼠标样式-cursor"><a href="#4-1-鼠标样式-cursor" class="headerlink" title="4.1 鼠标样式 cursor"></a>4.1 鼠标样式 cursor</h3><pre class="line-numbers language-none"><code class="language-none">li {cursor: pointer; }<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<img src="image-20210731034300808.png" alt="image-20210731034300808" style="zoom:67%;">
-
-<h3 id="4-2-轮廓线-outline"><a href="#4-2-轮廓线-outline" class="headerlink" title="4.2 轮廓线 outline"></a>4.2 轮廓线 outline</h3><p>给表单添加 outline: 0; 或者 outline: none; 样式之后，就可以去掉默认的蓝色边框。</p>
-<pre class="line-numbers language-none"><code class="language-none">input {outline: none; }<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="4-3-防止拖拽文本域-resize"><a href="#4-3-防止拖拽文本域-resize" class="headerlink" title="4.3 防止拖拽文本域 resize"></a>4.3 防止拖拽文本域 resize</h3><p>实际开发中，我们文本域右下角是不可以拖拽的。</p>
-<pre class="line-numbers language-none"><code class="language-none">textarea{ resize: none;}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="5-vertical-align-属性应用"><a href="#5-vertical-align-属性应用" class="headerlink" title="5 vertical-align 属性应用"></a>5 vertical-align 属性应用</h2><h3 id="5-0-vertical-align-属性"><a href="#5-0-vertical-align-属性" class="headerlink" title="5.0  vertical-align 属性"></a>5.0  vertical-align 属性</h3><p>CSS 的 <strong>vertical-align</strong> 属性使用场景： 经常用于设置图片或者表单(行内块元素）和文字垂直对齐。 </p>
-<p>官方解释： 用于设置一个元素的<strong>垂直对齐方式</strong>，但是它只针对于行内元素或者行内块元素有效。</p>
-<pre class="line-numbers language-none"><code class="language-none">vertical-align : baseline | top | middle | bottom <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<img src="image-20210731034547011.png" alt="image-20210731034547011" style="zoom:67%;">
-
-<img src="image-20210731034553446.png" alt="image-20210731034553446" style="zoom:67%;">
-
-<h3 id="5-1-图片、表单和文字对齐"><a href="#5-1-图片、表单和文字对齐" class="headerlink" title="5.1 图片、表单和文字对齐"></a>5.1 图片、表单和文字对齐</h3><img src="image-20210731034633745.png" alt="image-20210731034633745" style="zoom:67%;">
-
-<h3 id="5-2-解决图片底部默认空白缝隙问题"><a href="#5-2-解决图片底部默认空白缝隙问题" class="headerlink" title="5.2 解决图片底部默认空白缝隙问题"></a>5.2 解决图片底部默认空白缝隙问题</h3><img src="C:/Users/tzy/Desktop/article/css/css7of7/image-20210731034649015.png" alt="image-20210731034649015" style="zoom:67%;">
-
-<h2 id="6-溢出的文字省略号显示"><a href="#6-溢出的文字省略号显示" class="headerlink" title="6 溢出的文字省略号显示"></a>6 溢出的文字省略号显示</h2><img src="image-20210731040225932.png" alt="image-20210731040225932" style="zoom:67%;">
-
-
-
-<h3 id="6-1-单行文本溢出显示省略号"><a href="#6-1-单行文本溢出显示省略号" class="headerlink" title="6.1  单行文本溢出显示省略号"></a>6.1  单行文本溢出显示省略号</h3><p>必须满足三个条件</p>
-<pre class="line-numbers language-none"><code class="language-none">/*1. 先强制一行内显示文本*/
-white-space: nowrap; （ 默认 normal 自动换行）
-/*2. 超出的部分隐藏*/
-overflow: hidden;
-/*3. 文字用省略号替代超出的部分*/
-text-overflow: ellipsis;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="6-2-多行文本溢出显示省略号"><a href="#6-2-多行文本溢出显示省略号" class="headerlink" title="6.2 多行文本溢出显示省略号"></a>6.2 多行文本溢出显示省略号</h3><p>多行文本溢出显示省略号，有较大兼容性问题， 适合于webKit浏览器或移动端（移动端大部分是webkit内 核）</p>
-<pre class="line-numbers language-none"><code class="language-none">overflow: hidden;
-text-overflow: ellipsis;
-/* 弹性伸缩盒子模型显示 */
-display: -webkit-box;
-/* 限制在一个块元素显示的文本的行数 */
--webkit-line-clamp: 2;
-/* 设置或检索伸缩盒对象的子元素的排列方式 */
--webkit-box-orient: vertical;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>更推荐让后台人员来做这个效果，因为后台人员可以设置显示多少个字，操作更简单。</p>
-<h2 id="7-常见布局技巧"><a href="#7-常见布局技巧" class="headerlink" title="7 常见布局技巧"></a>7 常见布局技巧</h2><h3 id="7-1-margin负值运用"><a href="#7-1-margin负值运用" class="headerlink" title="7.1 margin负值运用"></a>7.1 margin负值运用</h3><img src="image-20210731035005055.png" alt="image-20210731035005055" style="zoom:67%;">
-
-<h3 id="7-2-文字围绕浮动元素"><a href="#7-2-文字围绕浮动元素" class="headerlink" title="7.2 文字围绕浮动元素"></a>7.2 文字围绕浮动元素</h3><img src="image-20210731035044206.png" alt="image-20210731035044206" style="zoom:67%;">
-
-<h3 id="7-3-行内块巧妙运用"><a href="#7-3-行内块巧妙运用" class="headerlink" title="7.3 行内块巧妙运用"></a>7.3 行内块巧妙运用</h3><img src="image-20210731035118099.png" alt="image-20210731035118099" style="zoom:67%;">
-
-<h3 id="7-4-CSS-三角强化"><a href="#7-4-CSS-三角强化" class="headerlink" title="7.4 CSS 三角强化"></a>7.4 CSS 三角强化</h3><img src="image-20210731035146874.png" alt="image-20210731035146874" style="zoom:67%;">
-
-<pre class="line-numbers language-none"><code class="language-none">width: 0;height: 0;border-color: transparent red transparent transparent;border-style: solid;border-width: 22px 8px 0 0;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="8-CSS-初始化"><a href="#8-CSS-初始化" class="headerlink" title="8 CSS 初始化"></a>8 CSS 初始化</h2><img src="image-20210731035230440.png" alt="image-20210731035230440" style="zoom:67%;">
 
                 
             </div>
@@ -645,7 +792,7 @@ display: -webkit-box;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tzhiy.github.io/2021/07/31/css-7-7/">https://tzhiy.github.io/2021/07/31/css-7-7/</a>
+                    <a href="https://tzhiy.github.io/2021/08/13/javascript-ji-chu/">https://tzhiy.github.io/2021/08/13/javascript-ji-chu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -687,12 +834,12 @@ display: -webkit-box;
                                     <span class="chip bg-color">基础</span>
                                 </a>
                             
-                                <a href="/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%89%8D%E7%AB%AF/">
                                     <span class="chip bg-color">前端</span>
+                                </a>
+                            
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
                         </div>
@@ -860,7 +1007,7 @@ display: -webkit-box;
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Sat Jul 31 2021 04:03:23 GMT+0800',
+    id: 'Fri Aug 13 2021 23:00:27 GMT+0800',
     owner: 'tzhiy',
     repo: 'blog-comment-repo',
     oauth: {
@@ -891,9 +1038,68 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/08/13/javascript-ji-chu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.png" class="responsive-img" alt="JavaScript基础">
+                        
+                        <span class="card-title">JavaScript基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
+                                    前端开发
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">基础</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/07/31/html5css3-ti-gao/">
                     <div class="card-image">
@@ -911,9 +1117,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -943,63 +1149,6 @@ gitment.render('gitment-content');
                     
                     <a href="/tags/HTML/">
                         <span class="chip bg-color">HTML</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/07/29/css-6-7/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/14.png" class="responsive-img" alt="CSS 基础总结 6/7">
-                        
-                        <span class="card-title">CSS 基础总结 6/7</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-29
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
-                                    前端开发
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">基础</span>
-                    </a>
-                    
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
