@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CSS 基础总结 2/7, tzhiy&#39;s Blog">
+    <meta name="keywords" content="JS 基础 DOM, tzhiy&#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CSS 基础总结 2/7 | tzhiy&#39;s Blog</title>
+    <title>JS 基础 DOM | tzhiy&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -317,7 +317,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CSS 基础总结 2/7</h1>
+                    <h1 class="description center-align post-title">JS 基础 DOM</h1>
                 </div>
             </div>
         </div>
@@ -437,12 +437,12 @@
                                 <span class="chip bg-color">基础</span>
                             </a>
                         
-                            <a href="/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
-                            </a>
-                        
                             <a href="/tags/%E5%89%8D%E7%AB%AF/">
                                 <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
                             </a>
                         
                     </div>
@@ -466,28 +466,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-20
+                    2021-08-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-02
+                    2021-08-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    734
+                    4.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    19 分
                 </div>
                 
 
@@ -510,97 +510,447 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="CSS-基础总结-2-7"><a href="#CSS-基础总结-2-7" class="headerlink" title="CSS 基础总结 2/7"></a>CSS 基础总结 2/7</h1><h2 id="0-Emmet-语法"><a href="#0-Emmet-语法" class="headerlink" title="0 Emmet 语法"></a>0 Emmet 语法</h2><h3 id="0-1-什么是-Emmet-语法"><a href="#0-1-什么是-Emmet-语法" class="headerlink" title="0.1 什么是 Emmet 语法"></a>0.1 什么是 Emmet 语法</h3><p>Emmet 语法的前身是 Zen coding ,它使用缩写来提高 HTML / CSS 的编写速度, VSCode内部已经集成该语法。</p>
-<h3 id="0-2-快速生成HTML结构语法"><a href="#0-2-快速生成HTML结构语法" class="headerlink" title="0.2 快速生成HTML结构语法"></a>0.2 快速生成HTML结构语法</h3><table>
+                <h1 id="JS-基础-DOM"><a href="#JS-基础-DOM" class="headerlink" title="JS 基础 DOM"></a>JS 基础 DOM</h1><h2 id="1-DOM-简介"><a href="#1-DOM-简介" class="headerlink" title="1 DOM 简介"></a>1 DOM 简介</h2><p>文档对象模型（Document Object Model，简称 DOM），是 W3C 组织推荐的处理可扩展标记语言（HTML或者XML）的标准编程接口。</p>
+<p>W3C 已经定义了一系列的 DOM 接口，通过这些 DOM 接口可以改变网页的内容、结构和样式。</p>
+<img src="image-20210814144234682.png" alt="image-20210814144234682" style="zoom:80%;">
+
+<ul>
+<li>文档：一个页面就是一个文档，DOM 中使用 doucument  来表示</li>
+<li>元素：页面中的所有标签都是元素，DOM中使用 element 表示</li>
+<li>节点：网页中的所有内容都是节点（标签，属性，文本，注释等），DOM中使用node表示</li>
+</ul>
+<p>DOM 把以上内容都看做是对象</p>
+<h2 id="2-获取元素"><a href="#2-获取元素" class="headerlink" title="2 获取元素"></a>2 获取元素</h2><h3 id="2-1-根据ID获取"><a href="#2-1-根据ID获取" class="headerlink" title="2.1 根据ID获取"></a>2.1 根据ID获取</h3><p><code>getElementByld()</code> 返回带ID的元素对象</p>
+<pre class="line-numbers language-none"><code class="language-none">doucument.getElementByld('id名')<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><code>console.dir()</code> 可以打印我们获取的元素对象</p>
+<h3 id="2-2-根据标签名获取"><a href="#2-2-根据标签名获取" class="headerlink" title="2.2 根据标签名获取"></a>2.2 根据标签名获取</h3><p><code>getElementByTagName()</code> 返回带有标签名的<strong>对象的集合</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">doucument.getElementsByTagName('标签名');
+
+//或者根据标签名获取父元素内部所有指定标签名的子元素
+ol.getElementsByTagName('li');<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>返回的是获取过来元素对象的集合，以伪数组的形式存储</p>
+<h3 id="2-3-通过H5新增方法获取"><a href="#2-3-通过H5新增方法获取" class="headerlink" title="2.3 通过H5新增方法获取"></a>2.3 通过H5新增方法获取</h3><table>
 <thead>
 <tr>
-<th align="center">序号</th>
-<th align="center">目的</th>
-<th align="center">写法</th>
-<th align="center">示例</th>
+<th align="center">方法</th>
+<th align="center">作用</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">1</td>
-<td align="center">多个相同标签</td>
-<td align="center">标签 * 数字</td>
-<td align="center">div*3</td>
+<td align="center"><code>document.getElementsByClassName('类名')</code></td>
+<td align="center">根据类名返回元素对象合集</td>
 </tr>
 <tr>
-<td align="center">2</td>
-<td align="center">父子级关系的标签</td>
-<td align="center">父标签 &gt; 子标签</td>
-<td align="center">ul &gt; li</td>
+<td align="center"><code>document.querySelector('选择器');</code></td>
+<td align="center">根据指定选择器返回第一个元素对象</td>
 </tr>
 <tr>
-<td align="center">3</td>
-<td align="center">兄弟关系的标签</td>
-<td align="center">兄弟标签 + 兄弟标签</td>
-<td align="center">div+p</td>
-</tr>
-<tr>
-<td align="center">4</td>
-<td align="center">成带有类名或者id名字</td>
-<td align="center">.类名 或 #id</td>
-<td align="center">.demo 或 #two</td>
-</tr>
-<tr>
-<td align="center">5</td>
-<td align="center">类名是有顺序的</td>
-<td align="center">自增符号 $</td>
-<td align="center">div$*3</td>
-</tr>
-<tr>
-<td align="center">6</td>
-<td align="center">在生成的标签内部写内容</td>
-<td align="center">用 { } 表示</td>
-<td align="center">div{内容}</td>
+<td align="center"><code>document.querySelectorAll('选择器');</code></td>
+<td align="center">根据指定选择器返回所有元素对象</td>
 </tr>
 </tbody></table>
-<h3 id="0-3-快速生成CSS样式语法"><a href="#0-3-快速生成CSS样式语法" class="headerlink" title="0.3 快速生成CSS样式语法"></a>0.3 快速生成CSS样式语法</h3><p>CSS 基本采取单词首字母简写形式即可。</p>
-<p>比如 lh26px 可以生成 line-height: 26px。</p>
-<h2 id="1-CSS-的三大特性"><a href="#1-CSS-的三大特性" class="headerlink" title="1 CSS 的三大特性"></a>1 CSS 的三大特性</h2><p>CSS 有三个非常重要的三个特性：层叠性、继承性、优先级。</p>
-<h3 id="1-1-层叠性"><a href="#1-1-层叠性" class="headerlink" title="1.1 层叠性"></a>1.1 层叠性</h3><p><strong>相同选择器</strong>给设置相同的样式，此时一个样式就会<strong>覆盖（层叠）</strong>另一个冲突的样式。层叠性主要解决样式冲突的问题。</p>
-<p> 层叠性原则： </p>
-<ul>
-<li>样式冲突，遵循的原则是<strong>就近原则</strong>，哪个样式离结构近，就执行哪个样式</li>
-<li>样式不冲突，不会层叠</li>
-</ul>
-<img src="image-20210720002056617.png" alt="image-20210720002056617" style="zoom: 67%;">
-
-<h3 id="1-2-继承性"><a href="#1-2-继承性" class="headerlink" title="1.2 继承性"></a>1.2 继承性</h3><p>CSS中的继承: 子标签会继承父标签的某些样式，如文本颜色和字号。</p>
-<img src="image-20210720002108649.png" alt="image-20210720002108649" style="zoom: 80%;">
-
-<ul>
-<li>恰当地使用继承可以简化代码，降低 CSS 样式的复杂性</li>
-<li>子元素可以继承父元素的样式（text-，font-，line-这些元素开头的可以继承，以及color属性）</li>
-</ul>
-<p><strong>行高的继承性</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">body {
- font:12px/1.5 Microsoft YaHei；
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>行高可以跟单位也可以不跟单位 </li>
-<li>如果子元素没有设置行高，则会继承父元素的行高为 1.5 </li>
-<li>此时子元素的行高是：当前子元素的文字大小 * 1.5  </li>
-<li>body 行高 1.5 这样写法最大的优势就是里面子元素可以根据自己文字大小自动调整行高</li>
-</ul>
-<h3 id="1-3-优先级"><a href="#1-3-优先级" class="headerlink" title="1.3 优先级"></a>1.3 优先级</h3><p>当同一个元素指定多个选择器，就会有优先级的产生。 </p>
-<ul>
-<li>选择器相同，则执行层叠性 </li>
-<li>选择器不同，则根据<strong>选择器权重</strong>执行</li>
-</ul>
-<p>选择器权重如下表所示</p>
-<p><img src="image-20210720002624121.png" alt="image-20210720002624121"></p>
-<p><strong>优先级注意点：</strong></p>
-<ol>
-<li>权重是有4组数字组成，但是不会有进位。 </li>
-<li>可以理解为类选择器永远大于元素选择器，id选择器永远大于类选择器，以此类推……</li>
-<li>等级判断从左向右，如果某一位数值相同，则判断下一位数值。 </li>
-<li><strong>继承的权重是0</strong>， 如果该元素没有<strong>直接选中</strong>，不管父元素权重多高，子元素得到的权重都是 0。</li>
+<p><code>querySelector</code> 和 <code>querySelectorAll</code> 里面的选择器需要加符号,比如: <code>document.querySelector('#nav');</code></p>
+<h3 id="2-4-获取特殊元素"><a href="#2-4-获取特殊元素" class="headerlink" title="2.4 获取特殊元素"></a>2.4 获取特殊元素</h3><table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>document.body;</code></td>
+<td align="center">返回body元素对象</td>
+</tr>
+<tr>
+<td align="center"><code>document.documentElement;</code></td>
+<td align="center">返回html元素对象</td>
+</tr>
+</tbody></table>
+<h2 id="3-事件基础"><a href="#3-事件基础" class="headerlink" title="3 事件基础"></a>3 事件基础</h2><p>触发-响应机制。</p>
+<h3 id="3-1-执行步骤"><a href="#3-1-执行步骤" class="headerlink" title="3.1 执行步骤"></a>3.1 执行步骤</h3><ol>
+<li>获取事件源</li>
+<li>注册事件(绑定事件)</li>
+<li>添加事件处理程序(采取函数赋值形式)</li>
 </ol>
-<p><strong>权重叠加：</strong>如果是复合选择器，则会有权重叠加，需要计算权重。</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script&gt;
+    // 1. 获取事件源
+    var div = document.querySelector('div');
+    // 2. 绑定事件 注册事件
+    // div.onclick 
+    // 3. 添加事件处理程序 
+    div.onclick = function() {
+        console.log('我被选中了');
+    }
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-2-鼠标事件"><a href="#3-2-鼠标事件" class="headerlink" title="3.2 鼠标事件"></a>3.2 鼠标事件</h3><table>
+<thead>
+<tr>
+<th align="center">鼠标事件</th>
+<th align="center">触发条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">onclick</td>
+<td align="center">鼠标点击左键触发</td>
+</tr>
+<tr>
+<td align="center">onmouseover</td>
+<td align="center">鼠标经过触发</td>
+</tr>
+<tr>
+<td align="center">onmouseout</td>
+<td align="center">鼠标离开触发</td>
+</tr>
+<tr>
+<td align="center">onfocus</td>
+<td align="center">获得鼠标焦点触发</td>
+</tr>
+<tr>
+<td align="center">onblur</td>
+<td align="center">失去鼠标焦点触发</td>
+</tr>
+<tr>
+<td align="center">onmousemove</td>
+<td align="center">鼠标移动触发</td>
+</tr>
+<tr>
+<td align="center">onmouseup</td>
+<td align="center">鼠标弹起触发</td>
+</tr>
+<tr>
+<td align="center">onmousedown</td>
+<td align="center">鼠标按下触发</td>
+</tr>
+</tbody></table>
+<h2 id="4-操作元素"><a href="#4-操作元素" class="headerlink" title="4 操作元素"></a>4 操作元素</h2><p>我们可以利用 DOM 操作元素来改变元素里面的内容、属性等。</p>
+<h3 id="4-1-元素内容"><a href="#4-1-元素内容" class="headerlink" title="4.1 元素内容"></a>4.1 元素内容</h3><pre class="line-numbers language-none"><code class="language-none">element.innerText
+//从起始位置到终止位置的内容，但它去除html标签，同时空格和换行也会去掉。
+
+element.innerHTML
+//起始位置到终止位置的全部内容，包括HTML标签，同时保留空格和换行<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-2-元素属性"><a href="#4-2-元素属性" class="headerlink" title="4.2 元素属性"></a>4.2 元素属性</h3><pre class="line-numbers language-none"><code class="language-none">// 元素.属性
+img.src = "xxx";
+
+input.value = "xxx";
+input.type = "xxx";
+input.checked = "xxx";
+input.selected = true / false;
+input.disabled = true / false;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-3-样式属性"><a href="#4-3-样式属性" class="headerlink" title="4.3 样式属性"></a>4.3 样式属性</h3><ol>
+<li>行内样式</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">// element.style
+div.style.backgroundColor = 'pink';
+div.style.width = '250px';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li>类名样式</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">// element.className<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">&lt;body&gt;
+    &lt;div class="first"&gt;文本&lt;/div&gt;
+    &lt;script&gt;
+        // 1. 使用 element.style 获得修改元素样式  如果样式比较少 或者 功能简单的情况下使用
+        var test = document.querySelector('div');
+        test.onclick = function() {
+            // this.style.backgroundColor = 'purple';
+            // 让我们当前元素的类名改为了 change
+
+            // 2. 我们可以通过 修改元素的className更改元素的样式 适合于样式较多或者功能复杂的情况
+            // 3. 如果想要保留原先的类名，我们可以这么做 多类名选择器
+            // this.className = 'change';
+            this.className = 'first change';
+        }
+    &lt;/script&gt;
+&lt;/body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-4-自定义属性"><a href="#4-4-自定义属性" class="headerlink" title="4.4 自定义属性"></a>4.4 自定义属性</h3><ol>
+<li>获取属性值</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">//获取内置属性值(元素本身自带的属性)element.属性;//获取自定义的属性或内置属性值element.getAttribute('属性');<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li>设置属性值</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">//设置内置属性值element.属性 = '值';//设置自定义的属性或内置属性值element.setAttribute('属性');<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="3">
+<li>移除属性值</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">element.removeAttribute('属性');<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="4">
+<li>自定义属性目的：</li>
+</ol>
+<ul>
+<li>保存并保存数据，有些数据可以保存到页面中而不用保存到数据库中</li>
+<li>有些自定义属性很容易引起歧义，不容易判断到底是内置属性还是自定义的，所以H5有了规定</li>
+</ul>
+<ol start="5">
+<li>设置自定义属性</li>
+</ol>
+<p>H5规定自定义属性 <code>data-</code>开头作为属性名并赋值</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;div data-index = "1"&gt;&lt;/&gt;// 或者使用JavaScript设置div.setAttribute('data-index',1);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="6">
+<li>获取自定义属性</li>
+</ol>
+<ul>
+<li>兼容性获取 <code>element.getAttribute('data-index')</code></li>
+<li>H5新增的：<code>element.dataset.index</code> 或<code>element.dataset['index']</code> IE11才开始支持</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">&lt;body&gt;    &lt;div getTime="20" data-index="2" data-list-name="andy"&gt;&lt;/div&gt;    &lt;script&gt;        var div = document.querySelector('div');        console.log(div.getAttribute('getTime'));        div.setAttribute('data-time', 20);        console.log(div.getAttribute('data-index'));        console.log(div.getAttribute('data-list-name'));        // h5新增的获取自定义属性的方法 它只能获取data-开头的        // dataset 是一个集合里面存放了所有以data开头的自定义属性        console.log(div.dataset);        console.log(div.dataset.index);        console.log(div.dataset['index']);        // 如果自定义属性里面有多个-链接的单词，我们获取的时候采取 驼峰命名法        console.log(div.dataset.listName);        console.log(div.dataset['listName']);    &lt;/script&gt;&lt;/body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="5-节点"><a href="#5-节点" class="headerlink" title="5 节点"></a>5 节点</h2><h3 id="5-1-节点概述"><a href="#5-1-节点概述" class="headerlink" title="5.1 节点概述"></a>5.1 节点概述</h3><p>网页中的所有内容都是节点（标签、属性、文本、注释等），在DOM 中，节点使用 node 来表示。</p>
+<p>HTML DOM 树中的所有节点均可通过 JavaScript 进行访问，所有 HTML 元素（节点）均可被修改，也可以创建或删除。</p>
+<img src="image-20210814144234682.png" alt="image-20210814144234682" style="zoom: 80%;">
+
+<p>一般的，节点至少拥有 nodeType（节点类型）、nodeName（节点名称）和 nodeValue（节点值）这三个基本属性。</p>
+<ul>
+<li>元素节点：nodeType 为1</li>
+<li>属性节点：nodeType 为2</li>
+<li>文本节点：nodeType 为3（文本节点包括文字、空格、换行等）</li>
+</ul>
+<p>我们在实际开发中，节点操作主要操作的是<strong>元素节点</strong></p>
+<p>利用 DOM 树可以把节点划分为不同的层级关系，常见的是<strong>父子兄层级关系</strong>。</p>
+<h3 id="5-2-父节点"><a href="#5-2-父节点" class="headerlink" title="5.2 父节点"></a>5.2 父节点</h3><pre class="line-numbers language-none"><code class="language-none">node.parentNode<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="5-3-子节点"><a href="#5-3-子节点" class="headerlink" title="5.3 子节点"></a>5.3 子节点</h3><pre class="line-numbers language-none"><code class="language-none">parentNode.childNodes //返回所有的子节点的集合parentNode.children //返回所有的子元素节点的集合，常用parentNode.firstChild //所有子节点中的第一个子结点parentNode.lastChild //所有子节点中的最后一个子结点parentNode.firstElementChild //所有子节点中的第一个子元素结点，兼容性parentNode.lastElementChild //所有子节点中的最后一个子元素结点，兼容性//由于一些兼容性问题，我们可以用以下方法返回第一个和最后一个子元素节点：parentNode.chilren[0]parentNode.chilren[parentNode.chilren.length - 1]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="5-4-兄弟节点"><a href="#5-4-兄弟节点" class="headerlink" title="5.4 兄弟节点"></a>5.4 兄弟节点</h3><pre class="line-numbers language-none"><code class="language-none">node.nextSibling //下一个兄弟节点node.previousSibling //上一个兄弟节点node.nextElementSibling //下一个兄弟元素节点，兼容性node.previousElementSibling //上一个兄弟节点，兼容性//可以自己封装函数解决兼容性问题function getNextElementSibling(element) {    var el = element;    while(el = el.nextSibling) {        if(el.nodeType === 1){            return el;        }    }    return null;}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="5-5-创建节点"><a href="#5-5-创建节点" class="headerlink" title="5.5 创建节点"></a>5.5 创建节点</h3><h4 id="5-5-1-添加节点"><a href="#5-5-1-添加节点" class="headerlink" title="5.5.1 添加节点"></a>5.5.1 添加节点</h4><pre class="line-numbers language-none"><code class="language-none">node.appendChild() 方法将一个节点添加到指定父节点的子节点列表末尾。node.insertBefore() 方法将一个节点添加到父节点的指定子节点前面<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="5-5-2-删除节点"><a href="#5-5-2-删除节点" class="headerlink" title="5.5.2 删除节点"></a>5.5.2 删除节点</h4><pre class="line-numbers language-none"><code class="language-none">node.removeChild(child)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="5-5-3-复制节点"><a href="#5-5-3-复制节点" class="headerlink" title="5.5.3 复制节点"></a>5.5.3 复制节点</h4><pre class="line-numbers language-none"><code class="language-none">node.cloneNode()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>如果括号参数为空或者为 false ，则是浅拷贝，即只克隆复制节点本身，不克隆里面的子节点</li>
+<li>如果括号参数为 true ，则是深度拷贝，会复制节点本身以及里面所有的子节点</li>
+</ul>
+<h2 id="6-DOM-核心"><a href="#6-DOM-核心" class="headerlink" title="6 DOM 核心"></a>6 DOM 核心</h2><p>对于DOM操作，我们主要针对子元素的操作，主要有：</p>
+<h3 id="6-1-创建"><a href="#6-1-创建" class="headerlink" title="6.1 创建"></a>6.1 创建</h3><ol>
+<li>document.write</li>
+<li>innerHTML</li>
+<li>createElement</li>
+</ol>
+<h3 id="6-2-增"><a href="#6-2-增" class="headerlink" title="6.2 增"></a>6.2 增</h3><ol>
+<li>appendChild</li>
+<li>insertBefore</li>
+</ol>
+<h3 id="6-3-删"><a href="#6-3-删" class="headerlink" title="6.3 删"></a>6.3 删</h3><ol>
+<li>removeChild</li>
+</ol>
+<h3 id="6-4-改"><a href="#6-4-改" class="headerlink" title="6.4 改"></a>6.4 改</h3><ol>
+<li>修改元素属性：src、href、title 等</li>
+<li>修改普通元素内容：innerHTML、innerText</li>
+<li>修改表单元素：value、type、disabled</li>
+<li>修改元素样式：style、className</li>
+</ol>
+<h3 id="6-5-查"><a href="#6-5-查" class="headerlink" title="6.5 查"></a>6.5 查</h3><ol>
+<li>DOM提供的API方法：getElementById、getElementsByTagName (方法较老，不推荐)</li>
+<li><strong>H5提供的新方法</strong>：querySelector、querySelectorAll (推荐)</li>
+<li><strong>利用节点操作获取元素</strong>：父（parentNode）、子（children）、兄（previousElementSibling、nextElementSibling）（推荐）</li>
+</ol>
+<h3 id="6-6-属性操作"><a href="#6-6-属性操作" class="headerlink" title="6.6 属性操作"></a>6.6 属性操作</h3><p>主要针对于自定义属性</p>
+<ol>
+<li>setAttribute：设置dom的属性值</li>
+<li>getAttribute：得到dom的属性值</li>
+<li>removeAttribute：移除属性</li>
+</ol>
+<h2 id="7-事件高级"><a href="#7-事件高级" class="headerlink" title="7 事件高级"></a>7 事件高级</h2><h3 id="7-1-注册事件（绑定事件）"><a href="#7-1-注册事件（绑定事件）" class="headerlink" title="7.1 注册事件（绑定事件）"></a>7.1 注册事件（绑定事件）</h3><p>给元素添加事件，称为注册事件或者绑定事件。</p>
+<p>注册事件有两种方式：传统方式和方法监听注册方式。</p>
+<p>传统方式具有注册事件的唯一性。</p>
+<h4 id="1-addEventListener-事件监听方式"><a href="#1-addEventListener-事件监听方式" class="headerlink" title="1 addEventListener 事件监听方式"></a>1 addEventListener 事件监听方式</h4><pre class="line-numbers language-none"><code class="language-none">eventTarget.addEventListener(type,listener[,useCapture])<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li><code>type</code>:事件类型字符串，比如 click 、mouseover，注意这里不要带on</li>
+<li><code>listener</code>：事件处理函数，事件发生时，会调用该监听函数</li>
+<li><code>useCapture</code>：可选参数，是一个布尔值，默认是 false。</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">&lt;body&gt;    &lt;button&gt;传统注册事件&lt;/button&gt;    &lt;button&gt;方法监听注册事件&lt;/button&gt;    &lt;button&gt;ie9 attachEvent&lt;/button&gt;    &lt;script&gt;        var btns = document.querySelectorAll('button');        // 1. 传统方式注册事件        btns[0].onclick = function() {            alert('hi');        }        btns[0].onclick = function() {                alert('hao a u');        }                // 2. 事件监听注册事件 addEventListener         // (1) 里面的事件类型是字符串 所以加引号 而且不带on        // (2) 同一个元素 同一个事件可以添加多个侦听器（事件处理程序）        btns[1].addEventListener('click', function() {            alert(22);        })        btns[1].addEventListener('click', function() {                alert(33);        })                // 3. attachEvent ie9以前的版本支持        btns[2].attachEvent('onclick', function() {            alert(11);        })    &lt;/script&gt;&lt;/body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="2-attachEvent事件监听方式（兼容）"><a href="#2-attachEvent事件监听方式（兼容）" class="headerlink" title="2 attachEvent事件监听方式（兼容）"></a>2 attachEvent事件监听方式（兼容）</h4><pre class="line-numbers language-none"><code class="language-none">eventTarget.attachEvent(eventNameWithOn,callback)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="3-注册事件兼容性解决方案"><a href="#3-注册事件兼容性解决方案" class="headerlink" title="3 注册事件兼容性解决方案"></a>3 注册事件兼容性解决方案</h4><pre class="line-numbers language-none"><code class="language-none">function addEventListener(element, eventName, fn) {     // 判断当前浏览器是否支持 addEventListener 方法     if (element.addEventListener) {       element.addEventListener(eventName, fn);  // 第三个参数 默认是false     } else if (element.attachEvent) {       element.attachEvent('on' + eventName, fn);     } else {       // 相当于 element.onclick = fn;       element['on' + eventName] = fn;      }}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="7-2-删除事件（解绑事件）"><a href="#7-2-删除事件（解绑事件）" class="headerlink" title="7.2 删除事件（解绑事件）"></a>7.2 删除事件（解绑事件）</h3><h4 id="1-removeEventListener-删除事件方式"><a href="#1-removeEventListener-删除事件方式" class="headerlink" title="1 removeEventListener 删除事件方式"></a>1 removeEventListener 删除事件方式</h4><pre class="line-numbers language-none"><code class="language-none">eventTarget.removeEventListener(type,listener[,useCapture]);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li><code>type</code>:事件类型字符串，比如click、mouseover，注意这里不要带 on</li>
+<li><code>listener</code>：事件处理函数，事件发生时，会调用该监听函数</li>
+<li><code>useCapture</code>：可选参数，是一个布尔值，默认是 false。</li>
+</ul>
+<h4 id="2-detachEvent删除事件方式-兼容"><a href="#2-detachEvent删除事件方式-兼容" class="headerlink" title="2 detachEvent删除事件方式(兼容)"></a>2 detachEvent删除事件方式(兼容)</h4><pre class="line-numbers language-none"><code class="language-none">eventTarget.detachEvent(eventNameWithOn,callback);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="3-传统事件删除方式"><a href="#3-传统事件删除方式" class="headerlink" title="3 传统事件删除方式"></a>3 传统事件删除方式</h4><pre class="line-numbers language-none"><code class="language-none">eventTarget.onclick = null;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">&lt;body&gt;    &lt;div&gt;1&lt;/div&gt;    &lt;div&gt;2&lt;/div&gt;    &lt;div&gt;3&lt;/div&gt;    &lt;script&gt;        var divs = document.querySelectorAll('div');        divs[0].onclick = function() {            alert(11);            // 1. 传统方式删除事件            divs[0].onclick = null;        }        // 2.removeEventListener 删除事件        divs[1].addEventListener('click',fn);   //里面的fn不需要调用加小括号        function fn(){            alert(22);            divs[1].removeEventListener('click',fn);        }        // 3.IE9 中的删除事件方式        divs[2].attachEvent('onclick',fn1);        function fn1() {            alert(33);            divs[2].detachEvent('onclick',fn1);        }    &lt;/script&gt;&lt;/body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="4-删除事件兼容性解决方案"><a href="#4-删除事件兼容性解决方案" class="headerlink" title="4 删除事件兼容性解决方案"></a>4 删除事件兼容性解决方案</h4><pre class="line-numbers language-none"><code class="language-none">function removeEventListener(element, eventName, fn) {      // 判断当前浏览器是否支持 removeEventListener 方法      if (element.removeEventListener) {        element.removeEventListener(eventName, fn);  // 第三个参数 默认是false      } else if (element.detachEvent) {        element.detachEvent('on' + eventName, fn);      } else {        element['on' + eventName] = null; } <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="7-3-DOM事件流"><a href="#7-3-DOM事件流" class="headerlink" title="7.3 DOM事件流"></a>7.3 DOM事件流</h3><ul>
+<li>事件流描述的是从页面中接收事件的顺序</li>
+<li>事件发生时会在元素节点之间按照特定的顺序传播，这个传播过程即DOM事件流</li>
+</ul>
+<img src="image-20210814164549426.png" alt="image-20210814164549426" style="zoom: 67%;">
+
+<ul>
+<li>事件冒泡： IE 最早提出，事件开始时由最具体的元素接收，然后逐级向上传播到到 DOM 最顶层节点的过程。</li>
+<li>事件捕获： 网景最早提出，由 DOM 最顶层节点开始，然后逐级向下传播到到最具体的元素接收的过程。</li>
+</ul>
+<h4 id="1-捕获阶段"><a href="#1-捕获阶段" class="headerlink" title="1 捕获阶段"></a>1 捕获阶段</h4><pre class="line-numbers language-none"><code class="language-none">&lt;body&gt;    &lt;div class="father"&gt;        &lt;div class="son"&gt;son盒子&lt;/div&gt;    &lt;/div&gt;    &lt;script&gt;        // dom 事件流 三个阶段        // 1. JS 代码中只能执行捕获或者冒泡其中的一个阶段。        // 2. onclick 和 attachEvent（ie） 只能得到冒泡阶段。        // 3. 捕获阶段 如果addEventListener 第三个参数是 true 那么则处于捕获阶段  document -&gt; html -&gt; body -&gt; father -&gt; son        var son = document.querySelector('.son');        son.addEventListener('click', function() {             alert('son');        }, true);        var father = document.querySelector('.father');        father.addEventListener('click', function() {            alert('father');        }, true);    &lt;/script&gt;&lt;/body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<img src="capture.gif" alt="capture" style="zoom:67%;">
+
+<h4 id="2-冒泡阶段"><a href="#2-冒泡阶段" class="headerlink" title="2 冒泡阶段"></a>2 冒泡阶段</h4><pre class="line-numbers language-none"><code class="language-none">&lt;body&gt;    &lt;div class="father"&gt;        &lt;div class="son"&gt;son盒子&lt;/div&gt;    &lt;/div&gt;    &lt;script&gt;		// 4. 冒泡阶段 如果addEventListener 第三个参数是 false 或者 省略 那么则处于冒泡阶段  son -&gt; father -&gt;body -&gt; html -&gt; document        var son = document.querySelector('.son');        son.addEventListener('click', function() {            alert('son');        }, false);        var father = document.querySelector('.father');        father.addEventListener('click', function() {            alert('father');        }, false);        document.addEventListener('click', function() {            alert('document');        })    &lt;/script&gt;&lt;/body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<img src="bubble.gif" alt="bubble" style="zoom:67%;">
+
+<h4 id="3-小结"><a href="#3-小结" class="headerlink" title="3 小结"></a>3 小结</h4><ul>
+<li>JS 代码中只能执行捕获或者冒泡其中的一个阶段</li>
+<li><code>onclick</code> 和 <code>attachEvent</code>只能得到冒泡阶段</li>
+<li><code>addEventListener(type,listener[,useCapture])</code>第三个参数如果是 true，表示在事件捕获阶段调用事件处理程序；如果是 false (不写默认就是false),表示在事件冒泡阶段调用事件处理程序</li>
+<li>实际开发中我们很少使用事件捕获，我们更关注事件冒泡。</li>
+<li>有些事件是没有冒泡的，比如 onblur、onfocus、onmouseenter、onmouseleave</li>
+</ul>
+<h3 id="7-4-事件对象"><a href="#7-4-事件对象" class="headerlink" title="7.4 事件对象"></a>7.4 事件对象</h3><pre class="line-numbers language-none"><code class="language-none">eventTarget.onclick = function(event) {   // 这个 event 就是事件对象，我们还喜欢的写成 e 或者 evt } eventTarget.addEventListener('click', function(event) {   // 这个 event 就是事件对象，我们还喜欢的写成 e 或者 evt  })<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>官方解释：event 对象代表事件的状态，比如键盘按键的状态、鼠标的位置、鼠标按钮的状态</li>
+<li>简单理解：<ul>
+<li>事件发生后，跟事件相关的一系列信息数据的集合都放到这个对象里面</li>
+<li>这个对象就是事件对象 event，它有很多属性和方法，比如<ul>
+<li>谁绑定了这个事件</li>
+<li>鼠标触发事件的话，会得到鼠标的相关信息，如鼠标位置</li>
+<li>键盘触发事件的话，会得到键盘的相关信息，如按了哪个键</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>这个 event 是个形参，系统帮我们设定为事件对象，不需要传递实参过去</li>
+<li>当我们注册事件时， event 对象就会被系统自动创建，并依次传递给事件监听器（事件处理函数）</li>
+</ul>
+<h4 id="1-事件对象的兼容性方案"><a href="#1-事件对象的兼容性方案" class="headerlink" title="1 事件对象的兼容性方案"></a>1 事件对象的兼容性方案</h4><pre class="line-numbers language-none"><code class="language-none">&lt;body&gt;    &lt;div&gt;123&lt;/div&gt;    &lt;script&gt;        // 事件对象        var div = document.querySelector('div');        div.onclick = function(e) {                // console.log(e);                // console.log(window.event);                // e = e || window.event;                console.log(e);            }        // 1. event 就是一个事件对象 写到我们侦听函数的 小括号里面 当形参来看        // 2. 事件对象只有有了事件才会存在，它是系统给我们自动创建的，不需要我们传递参数        // 3. 事件对象 是 我们事件的一系列相关数据的集合 跟事件相关的 比如鼠标点击里面就包含了鼠标的相关信息，鼠标坐标啊，如果是键盘事件里面就包含的键盘事件的信息 比如 判断用户按下了那个键        // 4. 这个事件对象我们可以自己命名 比如 event 、 evt、 e        // 5. 事件对象也有兼容性问题 ie678 通过 window.event 兼容性的写法  e = e || window.event;    &lt;/script&gt;&lt;/body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="2-事件对象的常见属性和方法"><a href="#2-事件对象的常见属性和方法" class="headerlink" title="2 事件对象的常见属性和方法"></a>2 事件对象的常见属性和方法</h4><table>
+<thead>
+<tr>
+<th align="center">事件对象属性方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">e.target</td>
+<td align="center">返回触发事件的对象 标准</td>
+</tr>
+<tr>
+<td align="center">e.srcElement</td>
+<td align="center">返回触发事件的对象 非标准 ie6-8使用</td>
+</tr>
+<tr>
+<td align="center">e.type</td>
+<td align="center">返回事件的类型 比如<code>click</code> <code>mouseover</code> 不带on</td>
+</tr>
+<tr>
+<td align="center">e.cancelBubble</td>
+<td align="center">该属性阻止冒泡，非标准，ie6-8使用</td>
+</tr>
+<tr>
+<td align="center">e.returnValue</td>
+<td align="center">该属性阻止默认行为 非标准，ie6-8使用</td>
+</tr>
+<tr>
+<td align="center">e.preventDefault()</td>
+<td align="center">该方法阻止默认行为 标准 比如不让链接跳转</td>
+</tr>
+<tr>
+<td align="center">e.stopPropagation()</td>
+<td align="center">阻止冒泡 标准</td>
+</tr>
+</tbody></table>
+<p><code>e.target</code> 和 <code>this</code> 的区别：</p>
+<ul>
+<li>this 是事件绑定的元素， 这个函数的调用者（绑定这个事件的元素）</li>
+<li>e.target 是事件触发的元素</li>
+</ul>
+<h3 id="7-5-事件对象阻止默认行为"><a href="#7-5-事件对象阻止默认行为" class="headerlink" title="7.5 事件对象阻止默认行为"></a>7.5 事件对象阻止默认行为</h3><pre class="line-numbers language-none"><code class="language-none">&lt;body&gt;    &lt;div&gt;123&lt;/div&gt;    &lt;a href="http://www.baidu.com"&gt;百度&lt;/a&gt;    &lt;form action="http://www.baidu.com"&gt;        &lt;input type="submit" value="提交" name="sub"&gt;    &lt;/form&gt;    &lt;script&gt;        // 常见事件对象的属性和方法        // 1. 返回事件类型        var div = document.querySelector('div');        div.addEventListener('click', fn);        div.addEventListener('mouseover', fn);        div.addEventListener('mouseout', fn);        function fn(e) {            console.log(e.type);        }        // 2. 阻止默认行为（事件） 让链接不跳转 或者让提交按钮不提交        var a = document.querySelector('a');        a.addEventListener('click', function(e) {                e.preventDefault(); //  dom 标准写法            })            // 3. 传统的注册方式        a.onclick = function(e) {            // 普通浏览器 e.preventDefault();  方法            // e.preventDefault();            // 低版本浏览器 ie678  returnValue  属性            // e.returnValue;            // 我们可以利用return false 也能阻止默认行为 没有兼容性问题 特点： return 后面的代码不执行了， 而且只限于传统的注册方式            return false;            alert(11);        }    &lt;/script&gt;&lt;/body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="7-6-阻止事件冒泡"><a href="#7-6-阻止事件冒泡" class="headerlink" title="7.6 阻止事件冒泡"></a>7.6 阻止事件冒泡</h3><pre class="line-numbers language-none"><code class="language-none">//标准写法e.stopPropagation();&lt;body&gt;    &lt;div class="father"&gt;        &lt;div class="son"&gt;son儿子&lt;/div&gt;    &lt;/div&gt;    &lt;script&gt;        // 常见事件对象的属性和方法        // 阻止冒泡  dom 推荐的标准 stopPropagation()         var son = document.querySelector('.son');        son.addEventListener('click', function(e) {            alert('son');            e.stopPropagation(); // stop 停止  Propagation 传播            e.cancelBubble = true; // 非标准 cancel 取消 bubble 泡泡        }, false);        var father = document.querySelector('.father');        father.addEventListener('click', function() {            alert('father');        }, false);        document.addEventListener('click', function() {            alert('document');        })    &lt;/script&gt;&lt;/body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="7-7-事件委托"><a href="#7-7-事件委托" class="headerlink" title="7.7 事件委托"></a>7.7 事件委托</h3><ul>
+<li>事件委托也称为事件代理，在 jQuery 里面称为事件委派</li>
+<li>事件委托的原理：不是每个子节点单独设置事件监听器，而是事件监听器设置在其父节点上，然后利用冒泡原理影响设置每个子节点</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">&lt;body&gt;    &lt;ul&gt;        &lt;li&gt;知否知否，点我应有弹框在手！&lt;/li&gt;        &lt;li&gt;知否知否，点我应有弹框在手！&lt;/li&gt;        &lt;li&gt;知否知否，点我应有弹框在手！&lt;/li&gt;        &lt;li&gt;知否知否，点我应有弹框在手！&lt;/li&gt;        &lt;li&gt;知否知否，点我应有弹框在手！&lt;/li&gt;    &lt;/ul&gt;    &lt;script&gt;        // 事件委托的核心原理：给父节点添加侦听器， 利用事件冒泡影响每一个子节点        var ul = document.querySelector('ul');        ul.addEventListener('click', function(e) {            // alert('知否知否，点我应有弹框在手！');            // e.target 这个可以得到我们点击的对象            e.target.style.backgroundColor = 'pink';            // 点了谁，就让谁的style里面的backgroundColor颜色变为pink        })    &lt;/script&gt;&lt;/body&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="7-8-常用鼠标事件"><a href="#7-8-常用鼠标事件" class="headerlink" title="7.8 常用鼠标事件"></a>7.8 常用鼠标事件</h3><table>
+<thead>
+<tr>
+<th align="center">鼠标事件</th>
+<th align="center">触发条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">onclick</td>
+<td align="center">鼠标点击左键触发</td>
+</tr>
+<tr>
+<td align="center">onmouseover</td>
+<td align="center">鼠标经过触发</td>
+</tr>
+<tr>
+<td align="center">onmouseout</td>
+<td align="center">鼠标离开触发</td>
+</tr>
+<tr>
+<td align="center">onfocus</td>
+<td align="center">获得鼠标焦点触发</td>
+</tr>
+<tr>
+<td align="center">onblur</td>
+<td align="center">失去鼠标焦点触发</td>
+</tr>
+<tr>
+<td align="center">onmousemove</td>
+<td align="center">鼠标移动触发</td>
+</tr>
+<tr>
+<td align="center">onmouseup</td>
+<td align="center">鼠标弹起触发</td>
+</tr>
+<tr>
+<td align="center">onmousedown</td>
+<td align="center">鼠标按下触发</td>
+</tr>
+</tbody></table>
+<h3 id="7-9-常用的键盘事件"><a href="#7-9-常用的键盘事件" class="headerlink" title="7.9 常用的键盘事件"></a>7.9 常用的键盘事件</h3><table>
+<thead>
+<tr>
+<th align="center">键盘事件</th>
+<th align="center">触发条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">onkeyup</td>
+<td align="center">某个键盘按键被松开时触发</td>
+</tr>
+<tr>
+<td align="center">onkeydown</td>
+<td align="center">某个键盘按键被按下时触发</td>
+</tr>
+<tr>
+<td align="center">onkeypress</td>
+<td align="center">某个键盘按键被按下时触发，但是它不识别功能键，比如 ctrl、 shift、 箭头等</td>
+</tr>
+</tbody></table>
 
                 
             </div>
@@ -627,7 +977,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tzhiy.github.io/2021/07/20/css-2-7/">https://tzhiy.github.io/2021/07/20/css-2-7/</a>
+                    <a href="https://tzhiy.github.io/2021/08/14/js-ji-chu-dom/">https://tzhiy.github.io/2021/08/14/js-ji-chu-dom/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -669,12 +1019,12 @@
                                     <span class="chip bg-color">基础</span>
                                 </a>
                             
-                                <a href="/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%89%8D%E7%AB%AF/">
                                     <span class="chip bg-color">前端</span>
+                                </a>
+                            
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
                         </div>
@@ -842,7 +1192,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Tue Jul 20 2021 00:35:37 GMT+0800',
+    id: 'Sat Aug 14 2021 17:05:43 GMT+0800',
     owner: 'tzhiy',
     repo: 'blog-comment-repo',
     oauth: {
@@ -873,17 +1223,18 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/07/20/css-3-7/">
+                <a href="/2021/08/14/js-ji-chu-dom/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.png" class="responsive-img" alt="CSS 基础总结 3/7">
+                        <img src="/medias/featureimages/10.png" class="responsive-img" alt="JS 基础 DOM">
                         
-                        <span class="card-title">CSS 基础总结 3/7</span>
+                        <span class="card-title">JS 基础 DOM</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -893,9 +1244,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -908,6 +1259,7 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -915,12 +1267,12 @@ gitment.render('gitment-content');
                         <span class="chip bg-color">基础</span>
                     </a>
                     
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
-                    </a>
-                    
                     <a href="/tags/%E5%89%8D%E7%AB%AF/">
                         <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
@@ -934,13 +1286,13 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/19/css-1-7/">
+                <a href="/2021/08/14/byte1html-ji-chu-css-ji-chu-ui-she-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.png" class="responsive-img" alt="CSS 基础总结 1/7">
+                        <img src="/medias/featureimages/3.png" class="responsive-img" alt="HTML 基础 &amp; CSS 基础 &amp; UI设计">
                         
-                        <span class="card-title">CSS 基础总结 1/7</span>
+                        <span class="card-title">HTML 基础 &amp; CSS 基础 &amp; UI设计</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -951,7 +1303,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-14
                             </span>
                         <span class="publish-author">
                             
@@ -968,16 +1320,20 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">基础</span>
-                    </a>
-                    
                     <a href="/tags/CSS/">
                         <span class="chip bg-color">CSS</span>
                     </a>
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
+                    <a href="/tags/HTML/">
+                        <span class="chip bg-color">HTML</span>
+                    </a>
+                    
+                    <a href="/tags/UI/">
+                        <span class="chip bg-color">UI</span>
+                    </a>
+                    
+                    <a href="/tags/YOUTHCAMP/">
+                        <span class="chip bg-color">YOUTHCAMP</span>
                     </a>
                     
                 </div>
