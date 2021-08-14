@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>HTML 基础 &amp; CSS 基础 &amp; UI设计</title>
+      <link href="/2021/08/14/byte1html-ji-chu-css-ji-chu-ui-she-ji/"/>
+      <url>/2021/08/14/byte1html-ji-chu-css-ji-chu-ui-she-ji/</url>
+      
+        <content type="html"><![CDATA[<p>字节跳动</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> HTML </tag>
+            
+            <tag> UI </tag>
+            
+            <tag> YOUTHCAMP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JS 基础 变量、函数、对象</title>
       <link href="/2021/08/13/javascript-ji-chu/"/>
       <url>/2021/08/13/javascript-ji-chu/</url>
@@ -126,7 +157,7 @@
       <link href="/2021/07/28/ao-yun-jiang-pai-bang-wei-xin-xiao-cheng-xu/"/>
       <url>/2021/07/28/ao-yun-jiang-pai-bang-wei-xin-xiao-cheng-xu/</url>
       
-        <content type="html"><![CDATA[<h1 id="奖牌榜微信小程序"><a href="#奖牌榜微信小程序" class="headerlink" title="奖牌榜微信小程序"></a>奖牌榜微信小程序</h1><p>该小程序实现奥运会奖牌榜的动态显示和其他页面的静态显示。奥运会期间累计超1400人数和4700人次访问。</p><img src="gh_fb62dfa5e95e_258.jpg" style="zoom: 67%;"><img src="1418CD7E53CCAF79A78EEFCFA3D23056.jpg" style="zoom: 25%;"><img src="229719F85A6FAD0583051DB7D85C81AA.jpg" style="zoom:25%;"><img src="BD07E91C91871EB445891F20E8D49FFE.jpg" style="zoom:25%;"><img src="E0AF4A513D599702A737F5528D53C6A0.jpg" style="zoom:25%;">]]></content>
+        <content type="html"><![CDATA[<h1 id="奖牌榜微信小程序"><a href="#奖牌榜微信小程序" class="headerlink" title="奖牌榜微信小程序"></a>奖牌榜微信小程序</h1><p>该小程序实现奥运会奖牌榜的动态显示和其他页面的静态显示。奥运会期间累计超1400人数和4700人次访问。</p><img src="gh_fb62dfa5e95e_258.jpg" style="zoom: 67%;"><img src="demo.gif" alt="demo" style="zoom: 25%;">]]></content>
       
       
       <categories>
