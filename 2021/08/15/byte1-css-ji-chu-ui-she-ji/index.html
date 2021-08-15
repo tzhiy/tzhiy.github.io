@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JS 基础 变量、函数、对象, tzhiy&#39;s Blog">
+    <meta name="keywords" content="CSS 基础 &amp; UI设计, tzhiy&#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JS 基础 变量、函数、对象 | tzhiy&#39;s Blog</title>
+    <title>CSS 基础 &amp; UI设计 | tzhiy&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JS 基础 变量、函数、对象</h1>
+                    <h1 class="description center-align post-title">CSS 基础 &amp; UI设计</h1>
                 </div>
             </div>
         </div>
@@ -433,16 +433,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">基础</span>
+                            <a href="/tags/CSS/">
+                                <span class="chip bg-color">CSS</span>
                             </a>
                         
                             <a href="/tags/%E5%89%8D%E7%AB%AF/">
                                 <span class="chip bg-color">前端</span>
                             </a>
                         
-                            <a href="/tags/JavaScript/">
-                                <span class="chip bg-color">JavaScript</span>
+                            <a href="/tags/UI/">
+                                <span class="chip bg-color">UI</span>
+                            </a>
+                        
+                            <a href="/tags/YOUTHCAMP/">
+                                <span class="chip bg-color">YOUTHCAMP</span>
                             </a>
                         
                     </div>
@@ -466,28 +470,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-13
+                    2021-08-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-14
+                    2021-08-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.7k
+                    7
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    1 分
                 </div>
                 
 
@@ -510,444 +514,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="JS-基础-变量、函数、对象"><a href="#JS-基础-变量、函数、对象" class="headerlink" title="JS 基础 变量、函数、对象"></a>JS 基础 变量、函数、对象</h1><p>总结中删去了大量与 C 语言重复的内容。</p>
-<h2 id="0-JavaScript-简介"><a href="#0-JavaScript-简介" class="headerlink" title="0 JavaScript 简介"></a>0 JavaScript 简介</h2><h3 id="0-1-JavaScript"><a href="#0-1-JavaScript" class="headerlink" title="0.1 JavaScript"></a>0.1 JavaScript</h3><ul>
-<li>JavaScript 是世界上最流行的语言之一，是一种运行在客户端的脚本语言 （Script 即脚本）</li>
-<li>脚本语言：不需要编译，运行过程中由 JS 解释器( JS 引擎）逐行来进行解释并执行</li>
-<li>现在也可以基于 Node.js 技术进行服务器端编程</li>
-</ul>
-<h3 id="0-2-浏览器执行-JS"><a href="#0-2-浏览器执行-JS" class="headerlink" title="0.2 浏览器执行 JS"></a>0.2 浏览器执行 JS</h3><p>浏览器分成两部分：渲染引擎和 JS 引擎</p>
-<ul>
-<li>渲染引擎：用来解析HTML与CSS，俗称内核，比如 chrome 浏览器的 blink ，老版本的 webkit</li>
-<li>JS 引擎：也称为 JS 解释器。 用来读取网页中的 JavaScript 代码，对其处理后运行，比如 Chrome 浏览器的 V8</li>
-</ul>
-<p>浏览器本身并不会执行JS代码，而是通过内置 JavaScript 引擎（解释器）来执行 JS 代码。JS 引擎执行代码时逐行解释每一句源码（转换为机器语言），然后由计算机去执行，所以JavaScript 语言归为脚本语言，会逐行解释执行。</p>
-<h3 id="0-3-JS的组成"><a href="#0-3-JS的组成" class="headerlink" title="0.3 JS的组成"></a>0.3 JS的组成</h3><p>JavaScript 包括 ECMAScript、DOM、BOM。</p>
-<h4 id="1-ECMAScript"><a href="#1-ECMAScript" class="headerlink" title="1 ECMAScript"></a>1 ECMAScript</h4><p><strong>ECMAScript</strong> 是由ECMA 国际进行标准化的一门编程语言，这种语言在万维网上应用广泛，它往往被称为 JavaScript 或 JScript，但实际上后两者是 ECMAScript 语言的实现和扩展。</p>
-<p>ECMAScript：ECMAScript 规定了JS的编程语法和基础核心知识，是所有浏览器厂商共同遵守的一套JS语法工业标准。</p>
-<h4 id="2-DOM文档对象模型"><a href="#2-DOM文档对象模型" class="headerlink" title="2 DOM文档对象模型"></a>2 DOM文档对象模型</h4><p><strong>DOM</strong>是W3C组织推荐的处理可扩展标记语言的标准编程接口。通过 DOM 提供的接口可以对页面上的各种元素进行操作（大小、位置、颜色等）。</p>
-<h4 id="3-BOM浏览器对象模型"><a href="#3-BOM浏览器对象模型" class="headerlink" title="3 BOM浏览器对象模型"></a>3 BOM浏览器对象模型</h4><p><strong>BOM</strong>是指浏览器对象模型，它提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。通过BOM可以操作浏览器窗口，比如弹出框、控制浏览器跳转、获取分辨率等。</p>
-<h2 id="1-JS-书写格式"><a href="#1-JS-书写格式" class="headerlink" title="1 JS 书写格式"></a>1 JS 书写格式</h2><h3 id="1-1-行内式"><a href="#1-1-行内式" class="headerlink" title="1.1 行内式"></a>1.1 行内式</h3><pre class="line-numbers language-none"><code class="language-none">&lt;input type="button" value="点我试试" onclink="alert('Hello World')" /&gt; <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="1-2-内嵌式"><a href="#1-2-内嵌式" class="headerlink" title="1.2 内嵌式"></a>1.2 内嵌式</h3><pre class="line-numbers language-none"><code class="language-none">&lt;script&gt;
-     alert('Hello World!');
-&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="1-3-外部JS"><a href="#1-3-外部JS" class="headerlink" title="1.3 外部JS"></a>1.3 外部JS</h3><pre class="line-numbers language-none"><code class="language-none">&lt;script src="my.js"&gt;&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="2-JS-基本语法"><a href="#2-JS-基本语法" class="headerlink" title="2 JS 基本语法"></a>2 JS 基本语法</h2><h3 id="2-1-输入输出"><a href="#2-1-输入输出" class="headerlink" title="2.1 输入输出"></a>2.1 输入输出</h3><table>
-<thead>
-<tr>
-<th align="center">方法</th>
-<th align="center">说明</th>
-<th align="center">归属</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">alert(msg);</td>
-<td align="center">浏览器弹出警示框</td>
-<td align="center">浏览器</td>
-</tr>
-<tr>
-<td align="center">console.log(msg);</td>
-<td align="center">浏览器控制台打印输出信息</td>
-<td align="center">浏览器</td>
-</tr>
-<tr>
-<td align="center">prompt(info);</td>
-<td align="center">浏览看弹出输入框，用户可以输入</td>
-<td align="center">浏览器</td>
-</tr>
-</tbody></table>
-<h3 id="2-2-变量"><a href="#2-2-变量" class="headerlink" title="2.2 变量"></a>2.2 变量</h3><h4 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1 初始化"></a>1 初始化</h4><p><code>var</code> 是一个 JS 关键字，用来声明变量(variable)。使用该关键字声明变量后，计算机会自动为变量分配内存空间。</p>
-<h4 id="2-声明变量的特殊情况"><a href="#2-声明变量的特殊情况" class="headerlink" title="2 声明变量的特殊情况"></a>2 声明变量的特殊情况</h4><table>
-<thead>
-<tr>
-<th align="center">说明</th>
-<th align="center">情况</th>
-<th align="center">结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">只声明，不赋值</td>
-<td align="center">var age; console.log(age);</td>
-<td align="center">undefined</td>
-</tr>
-<tr>
-<td align="center">不声明，不赋值，直接使用</td>
-<td align="center">console.log(age)</td>
-<td align="center">报错</td>
-</tr>
-<tr>
-<td align="center">不声明，只赋值，会自动声明该变量</td>
-<td align="center">age = 10;console.log(age);</td>
-<td align="center">10</td>
-</tr>
-</tbody></table>
-<h3 id="2-3-数据类型"><a href="#2-3-数据类型" class="headerlink" title="2.3 数据类型"></a>2.3 数据类型</h3><p><strong>JavaScript是一种弱类型或动态语言。</strong>这意味着不用提前声明变量的类型，在程序运行过程中，类型会被自动确定。</p>
-<p>JS 把数据类型分为两类：</p>
-<ul>
-<li>基本数据类型(Number, String, Boolean, Undefined, Null)</li>
-<li>复杂数据类型(Object)</li>
-</ul>
-<p>基本数据类型</p>
-<table>
-<thead>
-<tr>
-<th>简单数据类型</th>
-<th>说明</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>number</td>
-<td>数字型，包含整型值和浮点型值，如21，0.21</td>
-<td>0</td>
-</tr>
-<tr>
-<td>boolean</td>
-<td>布尔值类型，如true，false ，等价于1和0</td>
-<td>false</td>
-</tr>
-<tr>
-<td>undefined</td>
-<td>var a; 声明了变量a但是没有赋值，此时a=undefined</td>
-<td>undefined（未定义的）</td>
-</tr>
-<tr>
-<td>string</td>
-<td>字符串类型，如“张三”</td>
-<td>“”</td>
-</tr>
-<tr>
-<td>null</td>
-<td>var a = null;声明了变量a为空值</td>
-<td>null</td>
-</tr>
-</tbody></table>
-<p>详细信息参考：</p>
-<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AD%97%E9%9D%A2%E9%87%8F(string_literals)">语法和数据类型 - JavaScript | MDN (mozilla.org)</a></p>
-<h3 id="2-4-数据类型的转换"><a href="#2-4-数据类型的转换" class="headerlink" title="2.4 数据类型的转换"></a>2.4 数据类型的转换</h3><h4 id="1-转换为字符串型"><a href="#1-转换为字符串型" class="headerlink" title="1 转换为字符串型"></a>1 转换为字符串型</h4><table>
-<thead>
-<tr>
-<th align="center">方式</th>
-<th align="center">说明</th>
-<th align="center">案例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">toString()</td>
-<td align="center">转成字符串</td>
-<td align="center">var num = 1; alert(num.toString());</td>
-</tr>
-<tr>
-<td align="center">String()强制转换</td>
-<td align="center">转成字符串</td>
-<td align="center">var num = 1; alert(String(num));</td>
-</tr>
-<tr>
-<td align="center"><strong>加号拼接字符串</strong></td>
-<td align="center">和字符串拼接的结果都是字符串</td>
-<td align="center">var num =1; alert(num+“我是字符串”);</td>
-</tr>
-</tbody></table>
-<h4 id="2-转换为数字型"><a href="#2-转换为数字型" class="headerlink" title="2  转换为数字型"></a>2  转换为数字型</h4><table>
-<thead>
-<tr>
-<th>方式</th>
-<th>说明</th>
-<th>案例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>parselnt(string)函数</strong></td>
-<td>将string类型转成整数数值型</td>
-<td>parselnt(‘78’)</td>
-</tr>
-<tr>
-<td><strong>parseFloat(string)函数</strong></td>
-<td>将string类型转成浮点数数值型</td>
-<td>parseFloat(‘78.21’)</td>
-</tr>
-<tr>
-<td>Number()强制转换函数</td>
-<td>将string类型转换为数值型</td>
-<td>Number(‘12’)</td>
-</tr>
-<tr>
-<td>js 隐式转换(- * /)</td>
-<td>利用算术运算隐式转换为数值型</td>
-<td>‘12’-0</td>
-</tr>
-</tbody></table>
-<h4 id="3-转换为布尔型"><a href="#3-转换为布尔型" class="headerlink" title="3 转换为布尔型"></a>3 转换为布尔型</h4><table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-<th>案例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Boolean()函数</td>
-<td>其他类型转成布尔值</td>
-<td>Boolean(‘true’);</td>
-</tr>
-</tbody></table>
-<ul>
-<li>代表空、否定的值会被转换为false，如 ’ ’ , 0, NaN , null , undefined</li>
-<li>其余的值都会被被转换为true</li>
-</ul>
-<h3 id="2-5-运算符"><a href="#2-5-运算符" class="headerlink" title="2.5 运算符"></a>2.5 运算符</h3><p>运算符（operator）也被称为<strong>操作符</strong>，是用于实现赋值、比较和执行算数运算等功能的符号</p>
-<p>JavaScript 中常用的运算符有：</p>
-<ul>
-<li>算数运算符</li>
-<li>递增和递减运算符</li>
-<li>比较运算符</li>
-<li>逻辑运算符</li>
-<li>赋值运算符</li>
-</ul>
-<h3 id="2-6-流程控制"><a href="#2-6-流程控制" class="headerlink" title="2.6 流程控制"></a>2.6 流程控制</h3><ul>
-<li>if</li>
-<li>switch</li>
-<li>三元表达式</li>
-</ul>
-<h2 id="3-断点调试"><a href="#3-断点调试" class="headerlink" title="3 断点调试"></a>3 断点调试</h2><ol>
-<li>浏览器中按 F12 -&gt; sources -&gt;找到需要调试的文件 -&gt; 在程序的某一行设置断点</li>
-<li>刷新浏览器</li>
-<li>Watch: 监视，通过watch可以监视变量的值的变化</li>
-<li>F11: 程序单步执行，观察watch中变量的值的变化</li>
-</ol>
-<h2 id="4-循环"><a href="#4-循环" class="headerlink" title="4 循环"></a>4 循环</h2><ul>
-<li>for</li>
-<li>while</li>
-<li>do - while</li>
-<li>continue 关键字</li>
-<li>break 关键字</li>
-</ul>
-<h2 id="5-数组"><a href="#5-数组" class="headerlink" title="5 数组"></a>5 数组</h2><h3 id="5-1-创建数组"><a href="#5-1-创建数组" class="headerlink" title="5.1 创建数组"></a>5.1 创建数组</h3><p>JavaScript 中创建数组有两种方式：</p>
-<ul>
-<li>利用 new 创建数组</li>
-<li>利用数组字面量创建数组</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">// 1.利用数组字面量方式创建空的数组 
-var 数组名 =[];
-// 2.使用数组字面量方式创建带初始值的数组
-var 数组名 =['小白','小黑','小黄','瑞奇'];
-// 3.数组中可以存放任意类型的数据，例如字符串，数字，布尔值等
-var arrStus =['小白',12,true,28.9];<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="5-2-数组中新增元素"><a href="#5-2-数组中新增元素" class="headerlink" title="5.2 数组中新增元素"></a>5.2 数组中新增元素</h3><h4 id="1-通过修改-length-长度新增数组元素"><a href="#1-通过修改-length-长度新增数组元素" class="headerlink" title="1 通过修改 length 长度新增数组元素"></a>1 通过修改 length 长度新增数组元素</h4><ul>
-<li>可以通过修改 length 长度来实现数组扩容的目的</li>
-<li>length 属性是可读写的</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">var arr = ['red', 'green', 'blue', 'pink'];
-arr.length = 7;
-console.log(arr);
-console.log(arr[4]);
-console.log(arr[5]);
-console.log(arr[6]);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>其中索引号是 4，5，6 的空间没有给值，就是声明变量未给值，默认值就是 <strong>undefined</strong></p>
-<h4 id="2-通过修改数组索引新增数组元素"><a href="#2-通过修改数组索引新增数组元素" class="headerlink" title="2 通过修改数组索引新增数组元素"></a>2 通过修改数组索引新增数组元素</h4><ul>
-<li>可以通过修改数组索引的方式追加数组元素</li>
-<li>不能直接给数组名赋值，否则会覆盖掉以前的数据</li>
-<li>这种方式也是我们最常用的一种方式</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">var arr = ['red', 'green', 'blue', 'pink'];
-arr[4] = 'hotpink';
-console.log(arr);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="6-函数"><a href="#6-函数" class="headerlink" title="6 函数"></a>6 函数</h2><h3 id="6-1-函数的参数"><a href="#6-1-函数的参数" class="headerlink" title="6.1 函数的参数"></a>6.1 函数的参数</h3><h4 id="形参和实参个数不匹配"><a href="#形参和实参个数不匹配" class="headerlink" title="形参和实参个数不匹配"></a>形参和实参个数不匹配</h4><table>
-<thead>
-<tr>
-<th align="center">参数个数</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">实参个数等于形参个数</td>
-<td align="center">输出正确结果</td>
-</tr>
-<tr>
-<td align="center">实参个数多于形参个数</td>
-<td align="center">只取到形参的个数</td>
-</tr>
-<tr>
-<td align="center">实参个数小于形参个数</td>
-<td align="center">多的形参定义为undefined</td>
-</tr>
-</tbody></table>
-<h3 id="6-2-arguments-的使用"><a href="#6-2-arguments-的使用" class="headerlink" title="6.2 arguments 的使用"></a>6.2 arguments 的使用</h3><p>当我们不确定有多少个参数传递的时候，可以用 arguments 来获取。在 JavaScript 中，arguments 实际上它是当前函数的一个内置对象。所有函数都内置了一个 arguments 对象，arguments 对象中存储了传递的所有实参。</p>
-<ul>
-<li><strong>arguments</strong>存放的是传递过来的实参</li>
-<li><strong>arguments展示形式是一个伪数组，因此可以进行遍历。伪数组具有以下特点：</strong><ol>
-<li>具有 length 属性</li>
-<li>按索引方式储存数据</li>
-<li>不具有数组的 push , pop 等方法</li>
-</ol>
-</li>
-</ul>
-<h3 id="6-3-函数的两种声明方式"><a href="#6-3-函数的两种声明方式" class="headerlink" title="6.3 函数的两种声明方式"></a>6.3 函数的两种声明方式</h3><h4 id="1-自定义函数方式-命名函数"><a href="#1-自定义函数方式-命名函数" class="headerlink" title="1 自定义函数方式(命名函数)"></a>1 自定义函数方式(命名函数)</h4><p>利用函数关键字 function 自定义函数方式。</p>
-<pre class="line-numbers language-none"><code class="language-none">// 声明定义方式
-function fn() {...}
-
-// 调用  
-fn(); <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>调用函数的代码既可以放到声明函数的前面，也可以放在声明函数的后面</strong></p>
-<h4 id="2-函数表达式方式-匿名函数"><a href="#2-函数表达式方式-匿名函数" class="headerlink" title="2 函数表达式方式(匿名函数)"></a>2 函数表达式方式(匿名函数)</h4><pre class="line-numbers language-none"><code class="language-none">// 这是函数表达式写法，匿名函数后面跟分号结束
-var fn = function(){...};
-
-// 调用的方式，函数调用必须写到函数体下面
-fn();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ol>
-<li>因为函数没有名字，所以也称为<strong>匿名函数</strong></li>
-<li>这个 fn 里面存储的是一个函数</li>
-<li><strong>函数调用的代码必须写到函数体后面</strong></li>
-</ol>
-<h2 id="7-作用域"><a href="#7-作用域" class="headerlink" title="7 作用域"></a>7 作用域</h2><h3 id="7-1-全局作用域"><a href="#7-1-全局作用域" class="headerlink" title="7.1 全局作用域"></a>7.1 全局作用域</h3><h3 id="7-2-局部（函数）作用域"><a href="#7-2-局部（函数）作用域" class="headerlink" title="7.2 局部（函数）作用域"></a>7.2 局部（函数）作用域</h3><h3 id="7-3-块级作用域"><a href="#7-3-块级作用域" class="headerlink" title="7.3 块级作用域"></a>7.3 块级作用域</h3><p><code>var</code> 声明的变量没有块级作用域， <code>let</code> 和 <code>const</code> 声明的变量有块级作用域。我们常用 <code>let</code> 和 <code>const</code> 声明变量。</p>
-<h2 id="8-预解析"><a href="#8-预解析" class="headerlink" title="8 预解析"></a>8 预解析</h2><p>JavaScript 代码是由浏览器中的 JavaScript 解析器来执行的。JavaScript 解析器在运行 JavaScript 代码的时候分为两步：<strong>预解析和代码执行。</strong></p>
-<ul>
-<li><strong>预解析</strong>：js引擎会把js里面所有的 <strong>var</strong> 还有 <strong>function</strong> 提升到当前作用域的最前面</li>
-<li><strong>代码执行</strong>：从上到下执行JS语句</li>
-</ul>
-<h3 id="8-1-变量预解析（变量提升）"><a href="#8-1-变量预解析（变量提升）" class="headerlink" title="8.1 变量预解析（变量提升）"></a>8.1 变量预解析（变量提升）</h3><p>变量提升: 变量的声明会被提升到<strong>当前作用域</strong>的最上面，变量的赋值不会提升</p>
-<pre class="line-numbers language-none"><code class="language-none">console.log(num);  // undefined
-var num = 10;   
-
-//相当于执行了以下代码
-var num;		// 变量声明提升到当前作用域最上面
-console.log(num);
-num = 10;		// 变量的赋值不会提升<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>8.2 函数预解析（函数提升）</p>
-<p>函数提升： 函数的声明会被提升到<strong>当前作用域</strong>的最上面，但是不会调用函数。</p>
-<pre class="line-numbers language-none"><code class="language-none">fn();				//hello
-function fn() {
-    console.log('hello');
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="9-对象"><a href="#9-对象" class="headerlink" title="9 对象"></a>9 对象</h2><p>对象是由属性和方法组成的。</p>
-<h3 id="9-1-创建对象"><a href="#9-1-创建对象" class="headerlink" title="9.1 创建对象"></a>9.1 创建对象</h3><p>在 JavaScript 中，现阶段我们可以采用三种方式创建对象（object）：</p>
-<ul>
-<li>利用字面量创建对象</li>
-<li>利用 new Object创建对象</li>
-<li>利用构造函数创建对象</li>
-</ul>
-<h4 id="1-利用字面量创建对象"><a href="#1-利用字面量创建对象" class="headerlink" title="1 利用字面量创建对象"></a>1 利用字面量创建对象</h4><p>对象字面量：就是花括号 <code>{ }</code> 里面包含了表达这个具体事物（对象）的属性和方法</p>
-<p><code>{ }</code> 里面采取键值对的形式表示</p>
-<ul>
-<li>键：相当于属性名</li>
-<li>值：相当于属性值，可以是任意类型的值</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">var star = {
-    name : 'pink',
-    age : 18,
-    sex : '男',
-    sayHi : function(){
-        alert('大家好啊~');
-    }
-};
-// 多个属性或者方法中间用逗号隔开
-// 方法冒号后面跟的是一个匿名函数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="2-利用-new-Object-创建对象"><a href="#2-利用-new-Object-创建对象" class="headerlink" title="2  利用 new Object 创建对象"></a>2  利用 <code>new Object</code> 创建对象</h4><p>跟之前的 <code>new Array()</code> 原理一致：<code>var 对象名 = new Object();</code></p>
-<p>使用的格式：对象.属性 = 值</p>
-<pre class="line-numbers language-none"><code class="language-none">var obj = new Object(); //创建了一个空的对象
-
-obj.name = '张三丰';
-obj.age = 18;
-obj.sex = '男';
-obj.sayHi = function() {
-    console.log('hi~');
-}
-//1.我们是利用等号赋值的方法添加对象
-//2.每个属性和方法之间用分号结束
-
-console.log(obj.uname);
-console.log(obj['sex']);
-obj.sayHi();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="3-利用构造函数创建对象"><a href="#3-利用构造函数创建对象" class="headerlink" title="3 利用构造函数创建对象"></a>3 利用构造函数创建对象</h4><p><strong>构造函数</strong> ：是一种特殊的函数，主要用来初始化对象，即为对象成员变量赋初始值，它总与 new 运算符一起使用。我们可以把对象中一些公共的属性和方法抽取出来，然后封装到这个函数里面。</p>
-<p>在 js 中，使用构造函数要时要注意以下两点：</p>
-<ul>
-<li>构造函数用于创建某一类对象，其首字母要大写</li>
-<li>构造函数要和 new 一起使用才有意义</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">//构造函数的语法格式
-function 构造函数名() {
-    this.属性 = 值;
-    this.方法 = function() {}
-}
-new 构造函数名();
-
-//示例
-function People(uname, age, sex) {
-    this.name = uname;
-    this.age = age;
-    this.sex = sex;
-    this.sing = function(sang){
-        console.log(sang);
-    }
-}
-var xm = new People('小明', 18, '男');
-console.log(typeof xm) // object对象，调用函数返回的是对象<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>构造函数名字首字母要大写</li>
-<li>函数内的属性和方法前面需要添加 this ，表示当前对象的属性和方法。</li>
-<li>构造函数中不需要 return 返回结果。</li>
-<li>当我们创建对象的时候，必须用 new 来调用构造函数。</li>
-</ul>
-<h4 id="4-对象的调用"><a href="#4-对象的调用" class="headerlink" title="4 对象的调用"></a>4 对象的调用</h4><ul>
-<li>对象里面的属性调用 : <code>对象.属性名</code> 或者 <code>对象['属性名']</code></li>
-<li>对象里面的方法调用：对象.方法名() </li>
-</ul>
-<h4 id="5-变量、函数、属性、方法总结"><a href="#5-变量、函数、属性、方法总结" class="headerlink" title="5 变量、函数、属性、方法总结"></a>5 变量、函数、属性、方法总结</h4><ul>
-<li>变量：单独声明赋值，单独存在</li>
-<li>函数：单独存在的，通过<code>函数名()</code>的方式就可以调用</li>
-<li>属性：对象里面的变量称为属性，不需要声明，用来描述该对象的特征</li>
-<li>方法：对象里面的函数称为方法，不需要声明，使用<code>对象.方法名()</code>的方式就可以调用，方法用来描述该对象的行为和功能</li>
-</ul>
-<h3 id="9-2-遍历对象的属性"><a href="#9-2-遍历对象的属性" class="headerlink" title="9.2 遍历对象的属性"></a>9.2 遍历对象的属性</h3><p><code>for...in</code> 语句用于对数组或者对象的属性进行循环操作</p>
-<pre class="line-numbers language-none"><code class="language-none">for(变量 in 对象名字){
-    // 在此执行代码
-}
-
-for(var k in obj) {
-    console.log(k);		//这里的 k 是属性名
-    console.log(obj[k]);//这里的 obj[k] 是属性值
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="10-内置对象"><a href="#10-内置对象" class="headerlink" title="10 内置对象"></a>10 内置对象</h2><ul>
-<li>JavaScript 中的对象分为3种：自定义对象 、内置对象、 浏览器对象</li>
-<li>内置对象就是指 JS 语言自带的一些对象，这些对象供开发者使用，并提供了一些常用的或是最基本而必要的功能</li>
-<li>JavaScript 提供了多个内置对象：Math、 Date 、Array、String等</li>
-</ul>
-<h3 id="10-1-Math"><a href="#10-1-Math" class="headerlink" title="10.1 Math"></a>10.1 Math</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math">Math - JavaScript | MDN (mozilla.org)</a></p>
-<h3 id="10-2-Date"><a href="#10-2-Date" class="headerlink" title="10.2  Date"></a>10.2  Date</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date">Date - JavaScript | MDN (mozilla.org)</a></p>
-<h3 id="10-3-Array"><a href="#10-3-Array" class="headerlink" title="10.3  Array"></a>10.3  Array</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">Array - JavaScript | MDN (mozilla.org)</a></p>
-<h3 id="10-4-String"><a href="#10-4-String" class="headerlink" title="10.4 String"></a>10.4 String</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String">String - JavaScript | MDN (mozilla.org)</a></p>
-<h2 id="11-简单类型与复杂类型"><a href="#11-简单类型与复杂类型" class="headerlink" title="11 简单类型与复杂类型"></a>11 简单类型与复杂类型</h2><p>简单类型又叫做基本数据类型或者值类型，复杂类型又叫做引用类型。</p>
-<ul>
-<li>值类型：简单数据类型/基本数据类型，在存储时变量中存储的是值本身，因此叫做值类型：string ，number，boolean，undefined，null</li>
-<li>引用类型：复杂数据类型，在存储时变量中存储的仅仅是地址（引用），因此叫做引用数据类型：通过 <code>new</code> 关键字创建的对象（系统对象、自定义对象），如 Object、Array、Date等</li>
-</ul>
-<h3 id="11-1-堆和栈"><a href="#11-1-堆和栈" class="headerlink" title="11.1 堆和栈"></a>11.1 堆和栈</h3><ol>
-<li>栈（操作系统）：由操作系统自动分配释放存放函数的参数值、局部变量的值等。其操作方式类似于数据结构中的栈。简单数据类型存放到栈里面；</li>
-<li>堆（操作系统）：存储复杂类型(对象)，一般由程序员分配释放，若程序员不释放，由垃圾回收机制回收。复杂数据类型存放到堆里面。</li>
-</ol>
-<p>注意：JavaScript中没有堆栈的概念，通过堆栈的方式，可以让大家更容易理解代码的一些执行方式，便于将来学习其他语言。</p>
-<h3 id="11-2-简单类型的内存分配"><a href="#11-2-简单类型的内存分配" class="headerlink" title="11.2 简单类型的内存分配"></a>11.2 简单类型的内存分配</h3><ul>
-<li>值类型变量的数据直接存放在变量（栈空间）中</li>
-<li>引用类型（复杂数据类型）：通过 new 关键字创建的对象（系统对象、自定义对象），引用类型变量（栈空间）里存放的是地址，真正的对象实例存放在堆空间中</li>
-</ul>
-<img src="image-20210814022505364.png" alt="image-20210814022505364" style="zoom: 67%;">
-
-<p>复杂类型传参可以理解为传的是复杂类型的地址。</p>
-
+                <h1 id="CSS-基础-amp-UI设计"><a href="#CSS-基础-amp-UI设计" class="headerlink" title="CSS 基础 &amp; UI设计"></a>CSS 基础 &amp; UI设计</h1>
                 
             </div>
             <hr/>
@@ -973,7 +540,7 @@ for(var k in obj) {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tzhiy.github.io/2021/08/13/js-ji-chu-yu-fa/">https://tzhiy.github.io/2021/08/13/js-ji-chu-yu-fa/</a>
+                    <a href="https://tzhiy.github.io/2021/08/15/byte1-css-ji-chu-ui-she-ji/">https://tzhiy.github.io/2021/08/15/byte1-css-ji-chu-ui-she-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1011,16 +578,20 @@ for(var k in obj) {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">基础</span>
+                                <a href="/tags/CSS/">
+                                    <span class="chip bg-color">CSS</span>
                                 </a>
                             
                                 <a href="/tags/%E5%89%8D%E7%AB%AF/">
                                     <span class="chip bg-color">前端</span>
                                 </a>
                             
-                                <a href="/tags/JavaScript/">
-                                    <span class="chip bg-color">JavaScript</span>
+                                <a href="/tags/UI/">
+                                    <span class="chip bg-color">UI</span>
+                                </a>
+                            
+                                <a href="/tags/YOUTHCAMP/">
+                                    <span class="chip bg-color">YOUTHCAMP</span>
                                 </a>
                             
                         </div>
@@ -1188,7 +759,7 @@ for(var k in obj) {
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Fri Aug 13 2021 23:00:27 GMT+0800',
+    id: 'Sun Aug 15 2021 15:35:23 GMT+0800',
     owner: 'tzhiy',
     repo: 'blog-comment-repo',
     oauth: {
@@ -1219,17 +790,18 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/08/14/js-ji-chu-dom/">
+                <a href="/2021/08/15/byte1-css-ji-chu-ui-she-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.png" class="responsive-img" alt="JS 基础 DOM">
+                        <img src="/medias/featureimages/8.png" class="responsive-img" alt="CSS 基础 &amp; UI设计">
                         
-                        <span class="card-title">JS 基础 DOM</span>
+                        <span class="card-title">CSS 基础 &amp; UI设计</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1239,9 +811,9 @@ gitment.render('gitment-content');
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1254,19 +826,24 @@ gitment.render('gitment-content');
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">基础</span>
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
                     </a>
                     
                     <a href="/tags/%E5%89%8D%E7%AB%AF/">
                         <span class="chip bg-color">前端</span>
                     </a>
                     
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/UI/">
+                        <span class="chip bg-color">UI</span>
+                    </a>
+                    
+                    <a href="/tags/YOUTHCAMP/">
+                        <span class="chip bg-color">YOUTHCAMP</span>
                     </a>
                     
                 </div>
@@ -1280,13 +857,13 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/31/html5css3-ti-gao/">
+                <a href="/2021/08/15/byte1-html-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.png" class="responsive-img" alt="HTML5 和 CSS3 提高">
+                        <img src="/medias/featureimages/8.png" class="responsive-img" alt="HTML 基础">
                         
-                        <span class="card-title">HTML5 和 CSS3 提高</span>
+                        <span class="card-title">HTML 基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1297,7 +874,7 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-15
                             </span>
                         <span class="publish-author">
                             
@@ -1314,20 +891,16 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">基础</span>
-                    </a>
-                    
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
-                    </a>
-                    
                     <a href="/tags/%E5%89%8D%E7%AB%AF/">
                         <span class="chip bg-color">前端</span>
                     </a>
                     
                     <a href="/tags/HTML/">
                         <span class="chip bg-color">HTML</span>
+                    </a>
+                    
+                    <a href="/tags/YOUTHCAMP/">
+                        <span class="chip bg-color">YOUTHCAMP</span>
                     </a>
                     
                 </div>
