@@ -22,8 +22,6 @@
             
             <tag> CSS </tag>
             
-            <tag> 前端 </tag>
-            
             <tag> UI </tag>
             
             <tag> YOUTHCAMP </tag>
@@ -51,8 +49,6 @@
       
         <tags>
             
-            <tag> 前端 </tag>
-            
             <tag> HTML </tag>
             
             <tag> YOUTHCAMP </tag>
@@ -64,11 +60,11 @@
     
     
     <entry>
-      <title>HTML 基础 &amp; CSS 基础 &amp; UI设计</title>
+      <title>HTML 基础 &amp; CSS 基础 &amp; UI 设计（共 3 篇）</title>
       <link href="/2021/08/15/byte1-html-ji-chu-css-ji-chu-ui-she-ji/"/>
       <url>/2021/08/15/byte1-html-ji-chu-css-ji-chu-ui-she-ji/</url>
       
-        <content type="html"><![CDATA[<h1 id="HTML-基础-amp-CSS-基础-amp-UI设计"><a href="#HTML-基础-amp-CSS-基础-amp-UI设计" class="headerlink" title="HTML 基础 &amp; CSS 基础 &amp; UI设计"></a>HTML 基础 &amp; CSS 基础 &amp; UI设计</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="HTML-基础-amp-CSS-基础-amp-UI-设计（共-3-篇）"><a href="#HTML-基础-amp-CSS-基础-amp-UI-设计（共-3-篇）" class="headerlink" title="HTML 基础 &amp; CSS 基础 &amp; UI 设计（共 3 篇）"></a>HTML 基础 &amp; CSS 基础 &amp; UI 设计（共 3 篇）</h1><ul><li><p>HTML 基础</p></li><li><p>CSS 基础</p></li><li><p>UI 设计</p><p><a href="https://www.yuque.com/shenyangdong/kb/gk2bw1#nqjxs">给开发看的 UI 设计 · 语雀 (yuque.com)</a></p></li></ul>]]></content>
       
       
       <categories>
@@ -82,13 +78,13 @@
             
             <tag> CSS </tag>
             
-            <tag> 前端 </tag>
-            
             <tag> HTML </tag>
             
             <tag> UI </tag>
             
             <tag> YOUTHCAMP </tag>
+            
+            <tag> 整合 </tag>
             
         </tags>
       
@@ -97,11 +93,11 @@
     
     
     <entry>
-      <title>CSS 基础 笔记整合（共7篇）</title>
+      <title>CSS 基础 笔记整合（共 7 篇）</title>
       <link href="/2021/08/15/css-ji-chu-bi-ji-zheng-he/"/>
       <url>/2021/08/15/css-ji-chu-bi-ji-zheng-he/</url>
       
-        <content type="html"><![CDATA[<h1 id="CSS-基础-笔记整合-（共7篇）"><a href="#CSS-基础-笔记整合-（共7篇）" class="headerlink" title="CSS 基础 笔记整合 （共7篇）"></a>CSS 基础 笔记整合 （共7篇）</h1><p>对以前的笔记进行了整理。</p><ul><li><p><a href="https://tzhiy.github.io/2021/07/19/css-1-7/">CSS 基础总结 1/7 | tzhiy’s Blog</a></p><p>CSS 简介、基础选择器、字体属性、文本属性、CSS 引入方式</p></li><li><p><a href="https://tzhiy.github.io/2021/07/20/css-2-7/">CSS 基础总结 2/7 | tzhiy’s Blog</a></p><p>Emmet 语法、CSS 三大特性</p></li><li><p><a href="https://tzhiy.github.io/2021/07/20/css-3-7/">CSS 基础总结 3/7 | tzhiy’s Blog</a></p><p>盒子模型、圆角边框、盒子阴影、文字阴影</p></li><li><p><a href="https://tzhiy.github.io/2021/07/22/css-4-7/">CSS 基础总结 4/7 | tzhiy’s Blog</a></p><p>浮动、常见网页布局、清除浮动</p></li><li><p><a href="https://tzhiy.github.io/2021/07/23/css-5-7/">CSS 基础总结 5/7 | tzhiy’s Blog</a></p><p>学成在线案例</p></li><li><p><a href="https://tzhiy.github.io/2021/07/29/css-6-7/#toc-heading-13">CSS 基础总结 6/7 | tzhiy’s Blog</a></p><p>定位、网页布局总结、元素的显示与隐藏</p></li><li><p><a href="https://tzhiy.github.io/2021/07/31/css-7-7/">CSS 基础总结 7/7 | tzhiy’s Blog</a></p><p>精灵图、字体图标、三角、用户界面样式、vertical-align 属性样式、溢出文字省略号显示、常见布局技巧、CSS 初始化</p></li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="CSS-基础-笔记整合-（共-7-篇）"><a href="#CSS-基础-笔记整合-（共-7-篇）" class="headerlink" title="CSS 基础 笔记整合 （共 7 篇）"></a>CSS 基础 笔记整合 （共 7 篇）</h1><p>对以前的笔记进行了整理。</p><ul><li><p><a href="https://tzhiy.github.io/2021/07/19/css-1-7/">CSS 基础总结 1/7 | tzhiy’s Blog</a></p><p>CSS 简介、基础选择器、字体属性、文本属性、CSS 引入方式</p></li><li><p><a href="https://tzhiy.github.io/2021/07/20/css-2-7/">CSS 基础总结 2/7 | tzhiy’s Blog</a></p><p>Emmet 语法、CSS 三大特性</p></li><li><p><a href="https://tzhiy.github.io/2021/07/20/css-3-7/">CSS 基础总结 3/7 | tzhiy’s Blog</a></p><p>盒子模型、圆角边框、盒子阴影、文字阴影</p></li><li><p><a href="https://tzhiy.github.io/2021/07/22/css-4-7/">CSS 基础总结 4/7 | tzhiy’s Blog</a></p><p>浮动、常见网页布局、清除浮动</p></li><li><p><a href="https://tzhiy.github.io/2021/07/23/css-5-7/">CSS 基础总结 5/7 | tzhiy’s Blog</a></p><p>学成在线案例</p></li><li><p><a href="https://tzhiy.github.io/2021/07/29/css-6-7/#toc-heading-13">CSS 基础总结 6/7 | tzhiy’s Blog</a></p><p>定位、网页布局总结、元素的显示与隐藏</p></li><li><p><a href="https://tzhiy.github.io/2021/07/31/css-7-7/">CSS 基础总结 7/7 | tzhiy’s Blog</a></p><p>精灵图、字体图标、三角、用户界面样式、vertical-align 属性样式、溢出文字省略号显示、常见布局技巧、CSS 初始化</p></li></ul>]]></content>
       
       
       <categories>
