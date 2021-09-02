@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>JS 基础 笔记整合（共 5 篇）</title>
+      <link href="/2021/09/03/js-ji-chu-bi-ji-zheng-he/"/>
+      <url>/2021/09/03/js-ji-chu-bi-ji-zheng-he/</url>
+      
+        <content type="html"><![CDATA[<h1 id="JS-基础-笔记整合（共-5-篇）"><a href="#JS-基础-笔记整合（共-5-篇）" class="headerlink" title="JS 基础 笔记整合（共 5 篇）"></a>JS 基础 笔记整合（共 5 篇）</h1><ul><li><p><a href="https://tzhiy.github.io/2021/08/13/js-ji-chu-yu-fa/">JS 基础 变量、函数、对象 | tzhiy’s Blog</a></p></li><li><p><a href="https://tzhiy.github.io/2021/08/14/js-ji-chu-dom/#toc-heading-24">JS 基础 DOM | tzhiy’s Blog</a></p><p>对页面元素或节点的增删改查和属性修改</p></li><li><p><a href="https://blog.csdn.net/Augenstern_QXL/article/details/115406408">JS 基础 BOM（引用自：Augenstern_QXL的博客）</a></p><p>window 对象常见事件、定时器、JS 执行机制、location 对象、navgation 对象、history 对象</p></li><li><p><a href="https://blog.csdn.net/Augenstern_QXL/article/details/115219073">JS 面向对象（引用自：Augenstern_QXL的博客）</a></p><p>面向对象、构造函数和原型、继承、ES5 新增方法（数组、字符串、对象方法）、函数进阶（定义、调用、this 指向）</p></li><li><p><a href="https://blog.csdn.net/Augenstern_QXL/article/details/115344398">JS ES6（引用自：Augenstern_QXL的博客）</a></p><p>严格模式、高阶函数、闭包、深拷贝和浅拷贝、正则表达式</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础 </tag>
+            
+            <tag> 前端 </tag>
+            
+            <tag> 整合 </tag>
+            
+            <tag> JS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS 基础 &amp; UI设计</title>
       <link href="/2021/08/15/byte1-css-ji-chu/"/>
       <url>/2021/08/15/byte1-css-ji-chu/</url>
