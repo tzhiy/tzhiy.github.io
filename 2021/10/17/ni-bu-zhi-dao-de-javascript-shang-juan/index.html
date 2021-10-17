@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaScript 设计模式与开发实践, tzhiy&#39;s Blog">
+    <meta name="keywords" content="你不知道的JavaScript 上卷, tzhiy&#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JavaScript 设计模式与开发实践 | tzhiy&#39;s Blog</title>
+    <title>你不知道的JavaScript 上卷 | tzhiy&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaScript 设计模式与开发实践</h1>
+                    <h1 class="description center-align post-title">你不知道的JavaScript 上卷</h1>
                 </div>
             </div>
         </div>
@@ -445,28 +445,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-10-11
+                    2021-10-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-11
+                    2021-10-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    4.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    14 分
                 </div>
                 
 
@@ -489,7 +489,94 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="你不知道的-JavaScript-上卷"><a href="#你不知道的-JavaScript-上卷" class="headerlink" title="你不知道的 JavaScript 上卷"></a>你不知道的 JavaScript 上卷</h1><p>详细知识太多太细，这里仅仅只做简要概括总结。</p>
+<h2 id="Part-1-作用域和闭包"><a href="#Part-1-作用域和闭包" class="headerlink" title="Part 1 作用域和闭包"></a>Part 1 作用域和闭包</h2><h3 id="CH1-作用域是什么"><a href="#CH1-作用域是什么" class="headerlink" title="CH1 作用域是什么"></a>CH1 作用域是什么</h3><h4 id="1-1-编译原理"><a href="#1-1-编译原理" class="headerlink" title="1.1 编译原理"></a>1.1 编译原理</h4><p>三步：分词/词法分析、解析/语法分析、代码生成。</p>
+<h4 id="1-2-理解作用域"><a href="#1-2-理解作用域" class="headerlink" title="1.2 理解作用域"></a>1.2 理解作用域</h4><p>参与程序处理的有引擎（程序编译和执行的整个过程）、编译器（语法分析和代码生成）、作用域（确定代码对标识符的访问权限）。</p>
+<p><strong>作用域是一套规则，用于确定在何处以及如何查找变量（标识符）。</strong>如果查找的目的是对变量进行赋值，那么就会使用 LHS（Left Hand Search） 查询；如果目的是获取变量的值，就会使用 RHS 查询。赋值操作符会导致 LHS 查询。＝操作符或调用函数时传入参数的操作都会导致关联作用域的赋值操作。</p>
+<p>JavaScript 引擎首先会在代码执行前对其进行编译，在这个过程中，像 var a = 2 这样的声明会被分解成两个独立的步骤：</p>
+<ol>
+<li>首先，var a 在其作用域中声明新变量。这会在最开始的阶段，也就是代码执行前进行。 </li>
+<li>接下来，a = 2 会查询（LHS 查询）变量 a 并对其进行赋值。</li>
+</ol>
+<h4 id="1-3-作用域嵌套"><a href="#1-3-作用域嵌套" class="headerlink" title="1.3 作用域嵌套"></a>1.3 作用域嵌套</h4><p>LHS 和 RHS 查询都会在当前执行作用域中开始，如果有需要（也就是说它们没有找到所需的标识符），就会向上级作用域继续查找目标标识符，这样每次上升一级作用域（一层楼），最后抵达全局作用域（顶层），无论找到或没找到都将停止。 </p>
+<h4 id="1-4-异常"><a href="#1-4-异常" class="headerlink" title="1.4 异常"></a>1.4 异常</h4><p>不成功的 RHS 引用会导致抛出 ReferenceError 异常。不成功的 LHS 引用会导致自动隐式地创建一个全局变量（非严格模式下），该变量使用 LHS 引用的目标作为标识符，或者抛出 ReferenceError 异常（严格模式下）。</p>
+<h3 id="CH2-词法作用域"><a href="#CH2-词法作用域" class="headerlink" title="CH2 词法作用域"></a>CH2 词法作用域</h3><h4 id="2-1-词法阶段"><a href="#2-1-词法阶段" class="headerlink" title="2.1 词法阶段"></a>2.1 词法阶段</h4><p><strong>词法作用域就是定义在词法阶段的作用域。词法作用域意味着作用域是由书写代码时函数声明的位置来决定的。</strong>编译的词法分析阶段基本能够知道全部标识符在哪里以及是如何声明的，从而能够预测在执行过程中如何对它们进行查找。”遮蔽效应”是指作用域查找会在找到第一个匹配的标识符时停止。</p>
+<h4 id="2-2-欺骗词法"><a href="#2-2-欺骗词法" class="headerlink" title="2.2 欺骗词法"></a>2.2 欺骗词法</h4><p>JavaScript 中有两个机制可以“欺骗”词法作用域：eval(..) 和 with。前者可以对一段包含一个或多个声明的“代码”字符串进行演算，并借此来修改已经存在的词法作用域（在运行时）。后者本质上是通过将一个对象的引用当作作用域来处理，将对象的属性当作作用域中的标识符来处理，从而创建了一个新的词法作用域（同样是在运行时）。</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 使用示例</span>
+<span class="token function">eval</span><span class="token punctuation">(</span><span class="token string">"var b=2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">with</span> <span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	a <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+	b <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这两个机制的副作用是引擎无法在编译时对作用域查找进行优化，因为引擎只能谨慎地认为这样的优化是无效的。使用这其中任何一个机制都将导致代码运行变慢。<strong>不要使用它们</strong>。</p>
+<h3 id="CH3-函数作用域和块作用域"><a href="#CH3-函数作用域和块作用域" class="headerlink" title="CH3 函数作用域和块作用域"></a>CH3 函数作用域和块作用域</h3><h4 id="3-1-函数中的作用域"><a href="#3-1-函数中的作用域" class="headerlink" title="3.1 函数中的作用域"></a>3.1 函数中的作用域</h4><p>函数是 JavaScript 中最常见的作用域单元。<strong>函数作用域的含义是指，属于这个函数的全部变量都可以在整个函数的范围内使用及复用（事实上在嵌套的作用域中也可以使用）。</strong></p>
+<h4 id="3-2-隐藏内部实现"><a href="#3-2-隐藏内部实现" class="headerlink" title="3.2 隐藏内部实现"></a>3.2 隐藏内部实现</h4><p>本质上，声明在一个函数内部的变量或函数会在所处的作用域中“隐藏”起来，这是有意为之的良好软件的设计原则——最小特权原则（这个原则是指在软件设计中，应该最小限度地暴露必 要内容，而将其他内容都“隐藏”起来）。</p>
+<h4 id="3-3-函数作用域"><a href="#3-3-函数作用域" class="headerlink" title="3.3 函数作用域"></a>3.3 函数作用域</h4><p>匿名和具名：尽量具名，因为匿名函数调试困难、难以引用、语义较差。</p>
+<p>立即执行函数表达式</p>
+<h4 id="3-4-块作用域"><a href="#3-4-块作用域" class="headerlink" title="3.4 块作用域"></a>3.4 块作用域</h4><p>但函数不是唯一的作用域单元。块作用域指的是变量和函数不仅可以属于所处的作用域， 也可以属于某个代码块（通常指 { .. } 内部）。</p>
+<p>从 ES3 开始，try/catch 结构在 catch 分句中具有块作用域。 </p>
+<p>在 ES6 中引入了 let 关键字（var 关键字的表亲），用来在任意代码块中声明变量。if  (..) { let a = 2; } 会声明一个劫持了 if 的 { .. } 块的变量，并且将变量添加到这个块中。 </p>
+<p>有些人认为块作用域不应该完全作为函数作用域的替代方案。两种功能应该同时存在，开发者可以并且也应该根据需要选择使用何种作用域，创造可读、可维护的优良代码。</p>
+<h3 id="CH4-提升"><a href="#CH4-提升" class="headerlink" title="CH4 提升"></a>CH4 提升</h3><p>我们习惯将 var a = 2; 看作一个声明，而实际上 JavaScript 引擎并不这么认为。它将 var a 和 a = 2 当作两个单独的声明，第一个是编译阶段的任务，而第二个则是执行阶段的任务。 </p>
+<p>这意味着无论作用域中的声明出现在什么地方，都将在代码本身被执行前首先进行处理。 可以将这个过程形象地想象成所有的声明（变量和函数）都会被“移动”到各自作用域的最顶端，这个过程被称为提升。 </p>
+<p>声明本身会被提升，而包括函数表达式的赋值在内的赋值操作并不会提升。 </p>
+<p>要注意避免重复声明，特别是当普通的 var 声明和函数声明混合在一起的时候，否则会引起很多危险的问题！</p>
+<h3 id="CH5-闭包"><a href="#CH5-闭包" class="headerlink" title="CH5 闭包"></a>CH5 闭包</h3><h4 id="5-1-5-3-引入闭包"><a href="#5-1-5-3-引入闭包" class="headerlink" title="5.1 - 5.3 引入闭包"></a>5.1 - 5.3 引入闭包</h4><p>闭包实际上它只是一个标准，就是关于如何在函数作为值按需传递的词法环境中书写代码的。 </p>
+<p>闭包如何产生：<strong>当函数可以记住并访问所在的词法作用域，即使函数是在当前词法作用域之外执行，这时就产生了闭包。</strong> </p>
+<p>闭包是什么：函数持有对当前所在词法作用域的引用就是闭包。</p>
+<h4 id="5-4-5-5-循环与模块"><a href="#5-4-5-5-循环与模块" class="headerlink" title="5.4 - 5.5 循环与模块"></a>5.4 - 5.5 循环与模块</h4><p>闭包能的实际应用：如果没能认出闭包，也不了解它的工作原理，在使用它的过程中就很容易犯错，比如在循环中。但同时闭包也是一个非常强大的工具，可以用多种形式来实现模块等模式。 </p>
+<p>模块有两个主要特征：（1）为创建内部作用域而调用了一个包装函数；（2）包装函数的返回值必须至少包括一个对内部函数的引用，这样就会创建涵盖整个包装函数内部作用域的闭包。</p>
+<h2 id="Part-2-this-和对象原型"><a href="#Part-2-this-和对象原型" class="headerlink" title="Part 2 this 和对象原型"></a>Part 2 this 和对象原型</h2><h3 id="CH1-关于-this"><a href="#CH1-关于-this" class="headerlink" title="CH1 关于 this"></a>CH1 关于 this</h3><h4 id="1-1-为什么学-this"><a href="#1-1-为什么学-this" class="headerlink" title="1.1 为什么学 this"></a>1.1 为什么学 this</h4><p>使用 this 可以在不同上下文中使用函数时不用针对每个对象编写不同版本的函数。</p>
+<h4 id="1-2-误解"><a href="#1-2-误解" class="headerlink" title="1.2 误解"></a>1.2 误解</h4><p>学习 this 的第一步是明白 this 既不指向函数自身也不指向函数的词法作用域，你也许被这样的解释误导过，但其实它们都是错误的。 </p>
+<h4 id="1-3-this-是什么"><a href="#1-3-this-是什么" class="headerlink" title="1.3 this 是什么"></a>1.3 this 是什么</h4><p>this 实际上是在函数被调用时发生的绑定，它指向什么完全取决于函数在哪里被调用。</p>
+<p>this 的上下文取决于函数调用时的各种条件。<strong>当一个函数被调用时，会创建一个活动记录（有时候也称为执行上下文）。这个记录会包含函数在哪里被调用（调用栈）、函数的调用方法、传入的参数等信息</strong>。</p>
+<h3 id="CH2-this-全面解析"><a href="#CH2-this-全面解析" class="headerlink" title="CH2 this 全面解析"></a>CH2 this 全面解析</h3><h4 id="2-1-调用位置"><a href="#2-1-调用位置" class="headerlink" title="2.1 调用位置"></a>2.1 调用位置</h4><p>如果要判断一个运行中函数的 this 绑定，就需要找到这个函数的直接调用位置（而不是声明的位置），调用位置取决于<strong>调用栈</strong>。</p>
+<h4 id="2-2-2-3-绑定规则、优先级"><a href="#2-2-2-3-绑定规则、优先级" class="headerlink" title="2.2 - 2.3 绑定规则、优先级"></a>2.2 - 2.3 绑定规则、优先级</h4><p>找到之后就可以顺序应用下面这四条规则来判断 this 的绑定对象。 </p>
+<ol>
+<li><p><strong>new 绑定</strong>：由 new 调用？绑定到新创建的对象。 </p>
+</li>
+<li><p><strong>显示绑定</strong>：由 call 或者 apply（或者 bind）调用？绑定到指定的对象。 </p>
+</li>
+<li><p>由上下文对象调用？绑定到那个上下文对象。 </p>
+<p><strong>隐式调用</strong>：作为对象方法调用，this 指向这个对象；</p>
+<p>隐式丢失：作为普通函数调用，会应用默认绑定</p>
+</li>
+<li><p><strong>默认绑定</strong>：在严格模式下绑定到 undefined，否则绑定到全局对象。 </p>
+</li>
+</ol>
+<p>显示绑定和 new 绑定在声明情况下会同时使用？可以先用 bind 来传递部分参数，再由 new 绑定完成剩余参数传递。</p>
+<h4 id="2-4-绑定例外"><a href="#2-4-绑定例外" class="headerlink" title="2.4 绑定例外"></a>2.4 绑定例外</h4><p>如果你把 null 或者 undefined 作为 this 的绑定对象传入 call、apply 或者 bind，这些值 在调用时会被忽略。如果函数并不关心 this 的话，你仍然需要传入一个占位值，这时可以选择 null。</p>
+<p>一定要注意，有些调用可能在无意中使用默认绑定规则。如果想“更安全”地忽略 this 绑定，你可以使用一个 DMZ 对象，比如 ø = Object.create(null)，以保护全局对象。 </p>
+<h4 id="2-5-this-词法"><a href="#2-5-this-词法" class="headerlink" title="2.5 this 词法"></a>2.5 this 词法</h4><p>ES6 中的箭头函数并不会使用四条标准的绑定规则，而是根据当前的词法作用域来决定 this，具体来说，箭头函数会继承外层函数调用的 this 绑定（无论 this 绑定到什么）。这其实和 ES6 之前代码中的 self = this 机制一样。</p>
+<p>使用箭头函数是使用词法作用域风格的代码，使用 bind(…) 改变 this 指向是 this 风格的代码，两种风格最好不要混用。</p>
+<h3 id="CH3-对象"><a href="#CH3-对象" class="headerlink" title="CH3 对象"></a>CH3 对象</h3><h4 id="3-1-语法"><a href="#3-1-语法" class="headerlink" title="3.1 语法"></a>3.1 语法</h4><p>JavaScript 中的对象有字面形式（比如 var a = { .. }）和构造形式（比如 var a = new  Array(..)）。字面形式更常用，不过有时候构造形式可以提供更多选项。</p>
+<h4 id="3-2-类型"><a href="#3-2-类型" class="headerlink" title="3.2 类型"></a>3.2 类型</h4><p>许多人都以为“JavaScript 中万物都是对象”，这是错误的。对象是 6 个基础类型（string，number，boolean，null，undefined，object）之一。对象有包括 function 在内的子类型，不同子类型具有不同的行为，比如内部标签 [object Array] 表示这是对象的子类型数组。 </p>
+<h4 id="3-3-内容"><a href="#3-3-内容" class="headerlink" title="3.3 内容"></a>3.3 内容</h4><p>对象就是键 / 值对的集合。可以通过 .propName 或者 [“propName”] 语法来获取属性值。访问属性时，引擎实际上会调用内部的默认 [[Get]] 操作（在设置属性值时是 [[Put]]）， [[Get]] 操作会检查对象本身是否包含这个属性，如果没找到的话还会查找 [[Prototype]] 链（参见第 5 章）。</p>
+<p>属性的特性可以通过属性描述符来控制，比如 writable 和 configurable。此外，可以使用 Object.preventExtensions(..)、Object.seal(..) 和 Object.freeze(..) 来设置对象（及其属性）的不可变性级别。 </p>
+<p>属性不一定包含值——它们可能是具备 getter/setter 的“访问描述符”。此外，属性可以是可枚举或者不可枚举的，这决定了它们是否会出现在 for..in 循环中。 </p>
+<h4 id="3-4-遍历"><a href="#3-4-遍历" class="headerlink" title="3.4 遍历"></a>3.4 遍历</h4><p>你可以使用 ES6 的 for..of 语法来遍历数据结构（数组、对象，等等）中的值，for..of 会寻找内置或者自定义的 @@iterator 对象并调用它的 next() 方法来遍历数据值。</p>
+<h3 id="CH4-混合对象“类”"><a href="#CH4-混合对象“类”" class="headerlink" title="CH4 混合对象“类”"></a>CH4 混合对象“类”</h3><h4 id="4-1-类理论"><a href="#4-1-类理论" class="headerlink" title="4.1 类理论"></a>4.1 类理论</h4><p>类是一种设计模式。许多语言提供了对于面向类软件设计的原生语法。JavaScript 也有类似的语法，但是和其他语言中的类完全不同。</p>
+<h4 id="4-2-类的机制"><a href="#4-2-类的机制" class="headerlink" title="4.2 类的机制"></a>4.2 类的机制</h4><p>类意味着复制。</p>
+<p>传统的类被实例化时，它的行为会被复制到实例中。类被继承时，行为也会被复制到子类中。 </p>
+<h4 id="4-3-类的继承"><a href="#4-3-类的继承" class="headerlink" title="4.3 类的继承"></a>4.3 类的继承</h4><p>多态（在继承链的不同层次名称相同但是功能不同的函数）看起来似乎是从子类引用父类，但是本质上引用的其实是复制的结果。 </p>
+<p>JavaScript 并不会（像类那样）自动创建对象的副本。 </p>
+<p>混入模式（无论显式还是隐式）可以用来模拟类的复制行为，但是通常会产生丑陋并且脆 弱的语法，比如显式伪多态（OtherObj.methodName.call(this, …)），这会让代码更加难 懂并且难以维护。 </p>
+<h4 id="4-4-混入"><a href="#4-4-混入" class="headerlink" title="4.4 混入"></a>4.4 混入</h4><p>此外，显式混入实际上无法完全模拟类的复制行为，因为对象（和函数！别忘了函数也是对象）只能复制引用，无法复制被引用的对象或者函数本身。忽视这一点会导致许多问题。 </p>
+<p>总地来说，在 JavaScript 中模拟类是得不偿失的，虽然能解决当前的问题，但是可能会埋下更多的隐患。</p>
+<h3 id="CH5-原型"><a href="#CH5-原型" class="headerlink" title="CH5 原型"></a>CH5 原型</h3><p>如果要访问对象中并不存在的一个属性，[[Get]] 操作（参见第 3 章）就会查找对象内部 [[Prototype]] 关联的对象。这个关联关系实际上定义了一条“原型链”（有点像嵌套的作用域链），在查找属性时会对它进行遍历。 </p>
+<p>所有普通对象都有内置的 Object.prototype，指向原型链的顶端（比如说全局作用域），如果在原型链中找不到指定的属性就会停止。toString()、valueOf() 和其他一些通用的功能都存在于 Object.prototype 对象上，因此语言中所有的对象都可以使用它们。 </p>
+<p>关联两个对象最常用的方法是使用 new 关键词进行函数调用，在调用的 4 个步骤（第 2 章）中会创建一个关联其他对象的新对象。 </p>
+<p>使用 new 调用函数时会把新对象的 .prototype 属性关联到“其他对象”。带 new 的函数调用通常被称为“构造函数调用”，尽管它们实际上和传统面向类语言中的类构造函数不一样。</p>
+<p>虽然这些 JavaScript 机制和传统面向类语言中的“类初始化”和“类继承”很相似，但是 JavaScript 中的机制有一个核心区别，那就是不会进行复制，对象之间是通过内部的 [[Prototype]] 链关联的。</p>
+<p>出于各种原因，以“继承”结尾的术语（包括“原型继承”）和其他面向对象的术语都无法帮助你理解 JavaScript 的真实机制（不仅仅是限制我们的思维模式）。 </p>
+<p>相比之下，“委托”是一个更合适的术语，因为对象之间的关系不是复制而是委托。</p>
+<h3 id="CH6-行为委托"><a href="#CH6-行为委托" class="headerlink" title="CH6 行为委托"></a>CH6 行为委托</h3><p>在软件架构中你可以选择是否使用类和继承设计模式。大多数开发者理所当然地认为类是唯一（合适）的代码组织方式，但是本章中我们看到了另一种更少见但是更强大的设计模式：行为委托。</p>
+<p>行为委托认为对象之间是兄弟关系，互相委托，而不是父类和子类的关系。JavaScript 的 [[Prototype]] 机制本质上就是行为委托机制。也就是说，我们可以选择在 JavaScript 中努 力实现类机制（参见第 4 和第 5 章），也可以拥抱更自然的 [[Prototype]] 委托机制。</p>
+<p>当你只用对象来设计代码时，不仅可以让语法更加简洁，而且可以让代码结构更加清晰。</p>
+<p>对象关联（对象之前互相关联）是一种编码风格，它倡导的是直接创建和关联对象，不把 它们抽象成类。对象关联可以用基于 [[Prototype]] 的行为委托非常自然地实现。</p>
+
                 
             </div>
             <hr/>
@@ -515,7 +602,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tzhiy.github.io/2021/10/11/javascript-she-ji-mo-shi-yu-kai-fa-shi-jian/">https://tzhiy.github.io/2021/10/11/javascript-she-ji-mo-shi-yu-kai-fa-shi-jian/</a>
+                    <a href="https://tzhiy.github.io/2021/10/17/ni-bu-zhi-dao-de-javascript-shang-juan/">https://tzhiy.github.io/2021/10/17/ni-bu-zhi-dao-de-javascript-shang-juan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -718,7 +805,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Mon Oct 11 2021 12:29:01 GMT+0800',
+    id: 'Sun Oct 17 2021 19:35:08 GMT+0800',
     owner: 'tzhiy',
     repo: 'blog-comment-repo',
     oauth: {
@@ -749,54 +836,18 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/10/11/javascript-she-ji-mo-shi-yu-kai-fa-shi-jian-part-1-ji-chu-zhi-shi/">
+                <a href="/2021/10/17/ni-bu-zhi-dao-de-javascript-shang-juan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.png" class="responsive-img" alt="JavaScript 设计模式与开发实践 part 1 基础知识">
+                        <img src="/medias/featureimages/10.png" class="responsive-img" alt="你不知道的JavaScript 上卷">
                         
-                        <span class="card-title">JavaScript 设计模式与开发实践 part 1 基础知识</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-11
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            tzhiy
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/10/11/qian-duan-ji-chu-zhi-shi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.png" class="responsive-img" alt="前端基础知识">
-                        
-                        <span class="card-title">前端基础知识</span>
+                        <span class="card-title">你不知道的JavaScript 上卷</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -807,7 +858,45 @@ gitment.render('gitment-content');
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            tzhiy
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/10/15/js-du-shu-bi-ji/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.png" class="responsive-img" alt="JS 读书笔记">
+                        
+                        <span class="card-title">JS 读书笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-15
                             </span>
                         <span class="publish-author">
                             
@@ -824,16 +913,12 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">基础</span>
-                    </a>
-                    
                     <a href="/tags/%E5%89%8D%E7%AB%AF/">
                         <span class="chip bg-color">前端</span>
                     </a>
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C/">
-                        <span class="chip bg-color">网络</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
                     </a>
                     
                 </div>
@@ -1038,7 +1123,7 @@ gitment.render('gitment-content');
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">47.1k</span>
+                        class="white-color">51.1k</span>
             
             
             
